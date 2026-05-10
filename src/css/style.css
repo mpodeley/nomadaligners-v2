@@ -944,9 +944,11 @@ h3 { font-family: var(--font-family); font-weight: 600; letter-spacing: -0.01em;
 .bite-option img {
     width: 100%;
     aspect-ratio: 4/3;
-    object-fit: cover;
+    object-fit: contain;
+    background: var(--primary-color-soft);
     border-radius: 14px;
     margin-bottom: 12px;
+    padding: 8px;
 }
 .bite-option span { font-weight: 600; color: var(--dark-color); font-size: 0.95rem; }
 
