@@ -318,9 +318,9 @@ p {
     background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('../img/hero-bg.jpg') no-repeat center center/cover; /* Placeholder */
     min-height: calc(90vh - var(--header-height)); /* Ligeramente menos de pantalla completa */
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
     justify-content: center;
-    text-align: center;
     color: var(--dark-color);
     padding: 80px 0;
 }
