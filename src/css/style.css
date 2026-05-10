@@ -15,8 +15,8 @@
     --text-color: #2E3A4B;
     --muted-color: #6B7785;
     --border-color: #E5E2DA;
-    --font-display: 'Fraunces', Georgia, serif;
-    --font-family: 'Inter', 'Montserrat', system-ui, -apple-system, sans-serif;
+    --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-family: 'Inter', system-ui, -apple-system, sans-serif;
     --header-height: 72px;
     --shadow-sm: 0 1px 2px rgba(15, 27, 45, 0.04);
     --shadow: 0 4px 12px rgba(15, 27, 45, 0.06);
@@ -903,12 +903,12 @@ details[open] .faq-question::after { transform: translateY(-50%) rotate(45deg); 
 
 body { background: var(--white-color); font-family: var(--font-family); }
 
-/* Headings con Fraunces serif */
-h1, h2 { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.02em; line-height: 1.1; }
-h1 { font-size: clamp(2.4rem, 5vw, 3.5rem); }
-h2 { font-size: clamp(1.9rem, 3.5vw, 2.6rem); margin-bottom: 0.6em; }
+/* Headings — Inter weight 700, tight tracking */
+h1, h2 { font-family: var(--font-family); font-weight: 700; letter-spacing: -0.025em; line-height: 1.15; }
+h1 { font-size: clamp(2.2rem, 4.5vw, 3.2rem); }
+h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 0.6em; }
 h3 { font-family: var(--font-family); font-weight: 600; letter-spacing: -0.01em; }
-.hero h1 em, h1 em, h2 em { font-style: italic; color: var(--primary-color); }
+.hero h1 em, h1 em, h2 em { font-style: normal; color: var(--primary-color); }
 
 /* Hero refrescado — sin gradient azul */
 .hero { background: var(--white-color); }
@@ -991,7 +991,7 @@ h3 { font-family: var(--font-family); font-weight: 600; letter-spacing: -0.01em;
 
 /* Details panel resultado evaluador */
 .details-section { background: var(--card-color); border: 1px solid var(--border-color); }
-.details-section h3 { font-family: var(--font-display); font-weight: 500; color: var(--primary-color); font-size: 1.7rem; letter-spacing: -0.015em; }
+.details-section h3 { font-family: var(--font-family); font-weight: 700; color: var(--primary-color); font-size: 1.5rem; letter-spacing: -0.02em; }
 
 /* CTA "smileview" gradient warm 2026 */
 .btn-smileview { background: linear-gradient(135deg, #FF5B14 0%, #F26D5B 50%, #E8B86A 100%); box-shadow: 0 6px 18px rgba(242, 109, 91, 0.28); }
