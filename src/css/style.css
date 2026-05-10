@@ -1290,3 +1290,15 @@ h3 { font-family: var(--font-family); font-weight: 600; letter-spacing: -0.01em;
 /* Smooth scroll padding ajustado para sticky bottom mobile */
 @media (max-width: 768px) { html { scroll-padding-bottom: 80px; } }
 
+/* Fix global del icon-check (SVG renderea gigante sin constraint) */
+img[src*="icon-check"] {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+    object-fit: contain;
+}
+li img[src*="icon-check"] { margin-top: 2px; }
+
