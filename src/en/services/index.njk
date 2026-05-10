@@ -1,0 +1,92 @@
+---
+layout: layouts/base.en.njk
+permalink: /en/services/
+lang: en
+ogLocale: en_US
+title: "Services — Invisalign, Veneers, Whitening, Implants | NomadAligners"
+title_suffix: false
+description: "Full dental portfolio in Buenos Aires by Dr. Daniela Tkach. Invisalign-certified, English-speaking, premium care at a fraction of US prices."
+ogTitle: "Dental services in Buenos Aires — English-speaking practice"
+ogDescription: "Invisalign, veneers, whitening, crowns, implants. Premium care in Palermo Chico, BA."
+hreflang:
+  - { lang: "es-AR", url: "/servicios/" }
+  - { lang: "en", url: "/en/services/" }
+  - { lang: "x-default", url: "/servicios/" }
+---
+{% set waUrl = "https://wa.me/" + site.whatsappNumber + "?text=" + ("Hi, I would like to know about your dental services." | urlencode) %}
+
+<section class="services-hero">
+    <div class="container">
+        <span class="eyebrow">Full portfolio · English-speaking</span>
+        <h1>More than aligners.</h1>
+        <p class="section-lead" style="text-align: left; margin: 12px 0 0;">Dr. Daniela Tkach and an interdisciplinary team in Palermo Chico, Buenos Aires. One consultation, all the dental solutions you might need — at a fraction of US prices.</p>
+    </div>
+</section>
+
+<section class="container" style="padding: 64px 0;">
+    <div class="services-grid">
+        <article class="service-card service-flagship">
+            <div class="service-icon">✨</div>
+            <span class="service-badge">Flagship</span>
+            <span class="service-tagline">Our specialty</span>
+            <h2 class="service-title">Invisalign &amp; clear aligners</h2>
+            <p class="service-desc">Invisalign-certified planning, digital scan on first visit, your first set of aligners on the second. Remote follow-ups while you travel.</p>
+            <a href="/en/#evaluator" class="service-link" data-cta="service-en-aligners">Check your bite →</a>
+        </article>
+        <article class="service-card">
+            <div class="service-icon">💎</div>
+            <span class="service-tagline">Aesthetics</span>
+            <h2 class="service-title">Porcelain veneers</h2>
+            <p class="service-desc">Reshape, recolor, or resize front teeth with minimally invasive porcelain or composite veneers. Useful for cases where alignment isn't enough.</p>
+        </article>
+        <article class="service-card">
+            <div class="service-icon">🌟</div>
+            <span class="service-tagline">Brighter smile</span>
+            <h2 class="service-title">Teeth whitening</h2>
+            <p class="service-desc">In-office or take-home whitening kits, tuned for enamel safety and lasting results. Often paired with aligners as part of the plan.</p>
+        </article>
+        <article class="service-card">
+            <div class="service-icon">👑</div>
+            <span class="service-tagline">7-day delivery</span>
+            <h2 class="service-title">Porcelain crowns</h2>
+            <p class="service-desc">Digital scan to fitted porcelain crown in a single week — useful for travelers on tight schedules. Pure porcelain, no metal core.</p>
+        </article>
+        <article class="service-card">
+            <div class="service-icon">🔩</div>
+            <span class="service-tagline">Replace missing teeth</span>
+            <h2 class="service-title">Dental implants</h2>
+            <p class="service-desc">Digitally planned, surgeon-placed implants with full prosthetic finish. Multi-stage care coordinated with travel back to your home country.</p>
+        </article>
+        <article class="service-card">
+            <div class="service-icon">🦷</div>
+            <span class="service-tagline">Complex cases</span>
+            <h2 class="service-title">Prosthetic rehabilitation</h2>
+            <p class="service-desc">Crowns, bridges, and fixed or removable prostheses to restore function and aesthetics when multiple teeth are compromised.</p>
+        </article>
+        <article class="service-card">
+            <div class="service-icon">🌱</div>
+            <span class="service-tagline">Gum health</span>
+            <h2 class="service-title">Periodontics</h2>
+            <p class="service-desc">Deep cleaning and periodontal treatment with our periodontist. The foundation for any aesthetic work to last.</p>
+        </article>
+        <article class="service-card">
+            <div class="service-icon">📹</div>
+            <span class="service-tagline">After you fly home</span>
+            <h2 class="service-title">Teleconsultation</h2>
+            <p class="service-desc">Continue treatment from anywhere. Monthly video check-ins, aligners shipped internationally, refinements coordinated remotely.</p>
+        </article>
+    </div>
+</section>
+
+<section class="section-alt" style="padding: 80px 0;">
+    <div class="container" style="text-align: center;">
+        <h2>Not sure what you need?</h2>
+        <p class="section-lead">In the initial consultation we look at everything — orthodontics, aesthetics, gum health. You leave with a clear plan and a price.</p>
+        <div class="cta-row-center cta-row-stack" style="margin-top: 24px;">
+            <a href="{{ site.docturnoUrl }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg" data-cta="docturno-services-en">Book a consultation</a>
+            <a href="{{ waUrl }}" target="_blank" rel="noopener" class="btn btn-secondary btn-lg btn-whatsapp-contact" data-cta="whatsapp-services-en">
+                <img src="/img/WhatsApp.svg" alt="" class="whatsapp-icon" loading="lazy"> WhatsApp us
+            </a>
+        </div>
+    </div>
+</section>
