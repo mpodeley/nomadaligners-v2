@@ -1,0 +1,22 @@
+    <header class="header">
+        <nav class="container nav">
+            <div class="hamburger" aria-label="Open menu" role="button" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <a href="/en/" class="logo">{{ site.name }}</a>
+
+            <ul class="nav-menu">
+                <li><a href="/en/#evaluator">Bite check</a></li>
+                <li><a href="/en/#services">Services</a></li>
+                <li><a href="/en/#contact">Contact</a></li>
+                <li><a href="/" lang="es" class="lang-switch">🇦🇷 ES</a></li>
+            </ul>
+
+            <a href="https://wa.me/{{ site.whatsappNumber }}?text={{ 'Hi, I would like to ask about invisible aligners.' | urlencode }}" target="_blank" rel="noopener" class="btn-whatsapp-nav" aria-label="WhatsApp" data-cta="whatsapp-nav-en">
+                <img src="/img/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+            </a>
+        </nav>
+    </header>

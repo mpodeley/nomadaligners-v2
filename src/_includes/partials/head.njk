@@ -6,6 +6,12 @@
     <meta name="robots" content="{{ robots or 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1' }}">
     <meta name="theme-color" content="{{ site.themeColor }}">
 
+    {% if hreflang %}
+      {% for alt in hreflang %}
+    <link rel="alternate" hreflang="{{ alt.lang }}" href="{{ site.baseUrl }}{{ alt.url }}">
+      {% endfor %}
+    {% endif %}
+
     <link rel="icon" href="/img/favicon.png" type="image/png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 
-    <meta property="og:locale" content="{{ site.ogLocale }}">
+    <meta property="og:locale" content="{{ ogLocale or site.ogLocale }}">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="{{ site.name }}">
     <meta property="og:title" content="{{ ogTitle or title }}{% if title_suffix !== false %} | {{ site.name }}{% endif %}">

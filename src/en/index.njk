@@ -1,0 +1,146 @@
+---
+layout: layouts/base.en.njk
+permalink: /en/
+lang: en
+ogLocale: en_US
+title: "Invisalign in Buenos Aires — English-speaking Orthodontist | NomadAligners"
+title_suffix: false
+description: "Invisible aligners in Buenos Aires by Invisalign-certified Dr. Daniela Tkach. Top-tier dental work at a fraction of US prices. English-speaking team. Located in Palermo Chico."
+ogTitle: "Invisalign in Buenos Aires — English-speaking dental clinic"
+ogDescription: "Premium invisible orthodontics in Buenos Aires. Invisalign-certified. English-speaking practice."
+hreflang:
+  - { lang: "es-AR", url: "/" }
+  - { lang: "en", url: "/en/" }
+  - { lang: "x-default", url: "/" }
+faqs: []
+---
+{% set waUrl = "https://wa.me/" + site.whatsappNumber + "?text=" + ("Hi, I am visiting Buenos Aires and would like to ask about Invisalign treatment." | urlencode) %}
+{% set smileUrl = site.smileViewUrl + "?utm_source=site&utm_medium=en&utm_campaign=smileview&utm_content=en-home" %}
+
+<section id="home" class="hero">
+    <div class="container hero-content hero-flex-container">
+        <div class="hero-text-content">
+            <span class="eyebrow">English-speaking · Palermo Chico, Buenos Aires</span>
+            <h1>Invisalign in Buenos Aires, done right.</h1>
+            <p class="hero-lead">Invisible aligners with full digital planning by an Invisalign-certified orthodontist. Premium dentistry in Latin America at a fraction of US prices — and we'll plan around your travel dates.</p>
+
+            <div class="hero-cta-row">
+                <a href="#evaluator" class="btn btn-primary btn-lg" data-cta="evaluator-en-hero">👇 Check your bite</a>
+                <a href="{{ smileUrl }}" target="_blank" rel="noopener" class="btn btn-smileview btn-lg" data-cta="smileview-en-hero">✨ Preview your new smile</a>
+            </div>
+            <p class="hero-microcopy small muted">No email required. 30-second visual test.</p>
+        </div>
+        <div class="hero-image-wrap">
+            <img src="/img/nomad-hero.jpg" alt="NomadAligners — invisible aligners" class="hero-image" loading="eager" width="1200" height="675">
+        </div>
+    </div>
+
+    <div class="container trust-row" aria-label="Credentials">
+        <div class="trust-item"><strong>Invisalign</strong><span>Certified provider</span></div>
+        <div class="trust-divider"></div>
+        <div class="trust-item"><strong>{{ site.yearsExperience }}+ years</strong><span>Clinical experience</span></div>
+        <div class="trust-divider"></div>
+        <div class="trust-item"><strong>Palermo Chico</strong><span>Premium clinical district</span></div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+            <a href="{{ site.googleMapsReviewUrl }}" target="_blank" rel="noopener" data-cta="google-reviews-trust-en">
+                <strong>⭐⭐⭐⭐⭐</strong><span>Google reviews</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="evaluator" class="evaluator">
+    <div class="container">
+        <h2>What does your bite look like?</h2>
+        <p class="section-lead">Tap the image that looks most like yours. We'll tell you what's possible and how long it typically takes.</p>
+        <div class="bite-options">
+            <button class="bite-option" data-pathology="apiñamiento"><img src="/img/apinamiento.jpg" alt="Crowding" loading="lazy"><span>Crowding</span></button>
+            <button class="bite-option" data-pathology="diastemas"><img src="/img/espaciamientoexcesivo.jpg" alt="Gaps" loading="lazy"><span>Gaps (Diastemas)</span></button>
+            <button class="bite-option" data-pathology="mordida_cruzada"><img src="/img/mordidacruzada.jpg" alt="Crossbite" loading="lazy"><span>Crossbite</span></button>
+            <button class="bite-option" data-pathology="sobremordida"><img src="/img/sobremordida.jpg" alt="Overbite" loading="lazy"><span>Overbite</span></button>
+            <button class="bite-option" data-pathology="mordida_abierta"><img src="/img/mordidaabierta.jpg" alt="Open bite" loading="lazy"><span>Open bite</span></button>
+            <button class="bite-option" data-pathology="prognatismo"><img src="/img/mordidainferior.jpg" alt="Class III" loading="lazy"><span>Class III</span></button>
+            <button class="bite-option bite-option-unknown" data-pathology="unknown"><span>🤔 Not sure</span></button>
+        </div>
+        <div id="details" class="details-section" style="display: none;"></div>
+    </div>
+</section>
+
+<section id="services" class="section-alt" style="padding: 96px 0;">
+    <div class="container">
+        <span class="eyebrow" style="display:block; text-align:center; margin-bottom: 8px;">More than aligners</span>
+        <h2 style="text-align:center;">A full dental portfolio</h2>
+        <p class="section-lead">Dr. Daniela Tkach and an interdisciplinary team. One consultation, all the solutions you might need.</p>
+        <div class="services-grid" style="margin-top: 32px;">
+            <article class="service-card service-flagship">
+                <div class="service-icon">✨</div>
+                <span class="service-badge">Flagship</span>
+                <span class="service-tagline">Our specialty</span>
+                <h3 class="service-title">Invisalign &amp; clear aligners</h3>
+                <p class="service-desc">Digital scan on visit one. Your first set of aligners on visit two. Invisalign-certified planning.</p>
+            </article>
+            <article class="service-card">
+                <div class="service-icon">💎</div>
+                <span class="service-tagline">Aesthetics</span>
+                <h3 class="service-title">Porcelain veneers</h3>
+                <p class="service-desc">Reshape, recolor, or resize your front teeth with minimally invasive porcelain or composite veneers.</p>
+            </article>
+            <article class="service-card">
+                <div class="service-icon">🌟</div>
+                <span class="service-tagline">Brighter smile</span>
+                <h3 class="service-title">Teeth whitening</h3>
+                <p class="service-desc">In-office or take-home whitening kits, tuned for enamel safety and lasting results.</p>
+            </article>
+            <article class="service-card">
+                <div class="service-icon">👑</div>
+                <span class="service-tagline">7-day delivery</span>
+                <h3 class="service-title">Porcelain crowns</h3>
+                <p class="service-desc">Digital scan to fitted porcelain crown in a single week — useful for travelers on tight schedules.</p>
+            </article>
+            <article class="service-card">
+                <div class="service-icon">🔩</div>
+                <span class="service-tagline">Replace missing teeth</span>
+                <h3 class="service-title">Dental implants</h3>
+                <p class="service-desc">Digitally planned, surgeon-placed implants with full prosthetic finish. Multi-stage care coordinated.</p>
+            </article>
+            <article class="service-card">
+                <div class="service-icon">📹</div>
+                <span class="service-tagline">Remote follow-up</span>
+                <h3 class="service-title">Teleconsultation</h3>
+                <p class="service-desc">Continue treatment after you fly home. Video check-ins keep your aligner sequence on track.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="container" style="padding: 96px 0;">
+    <h2 style="text-align:center;">Built for travelers</h2>
+    <p class="section-lead">Many of our patients fly in for a scan, fly out with a plan, and continue from anywhere.</p>
+    <ol class="process-steps" style="margin-top: 32px;">
+        <li><span class="process-step-num">1</span><strong>Pre-visit consultation</strong><p>WhatsApp or video call to understand your case and align expectations before you book a flight.</p></li>
+        <li><span class="process-step-num">2</span><strong>Scan &amp; plan visit</strong><p>One in-person session for the digital scan + a same-week treatment preview in 3D.</p></li>
+        <li><span class="process-step-num">3</span><strong>Aligners shipped to you</strong><p>We mail successive sets internationally as your treatment progresses.</p></li>
+        <li><span class="process-step-num">4</span><strong>Video follow-ups</strong><p>Monthly teleconsultations keep your plan on track from wherever you are.</p></li>
+    </ol>
+</section>
+
+<section id="contact" class="contact section-alt">
+    <div class="container">
+        <h2 style="text-align:center;">Plan your visit</h2>
+        <p class="section-lead">No commitment, no pressure. A short consultation gives you a clear plan and price.</p>
+        <div class="cta-row-center cta-row-stack" style="margin-top: 28px;">
+            <a href="{{ smileUrl }}" target="_blank" rel="noopener" class="btn btn-smileview btn-lg" data-cta="smileview-en-contact">✨ Preview your new smile</a>
+            <a href="{{ waUrl }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg" data-cta="whatsapp-en-contact">
+                <img src="/img/WhatsApp.svg" alt="" class="whatsapp-icon" loading="lazy"> WhatsApp Dr. Tkach
+            </a>
+            <a href="mailto:{{ site.email }}?subject=Inquiry%20from%20%5Bcountry%5D" class="btn btn-secondary btn-lg" data-cta="email-en-contact">✉️ Email</a>
+        </div>
+
+        <div class="contact-info contact-info-grid">
+            <p>📍 <strong>{{ site.address.full }}</strong></p>
+            <p>📞 <a href="tel:{{ site.phoneTel }}">{{ site.phone }}</a></p>
+            <p>✉️ <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        </div>
+    </div>
+</section>

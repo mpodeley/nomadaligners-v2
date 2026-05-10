@@ -1,0 +1,11 @@
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© <span id="year"></span> {{ site.name }} · {{ site.doctorName }} · {{ site.address.full }}</p>
+                <p class="social-links">
+                    <a href="/" lang="es">🇦🇷 Versión en español</a>
+                    {% for ig in site.instagram %} · <a href="{{ ig.url }}" target="_blank" rel="noopener">{{ ig.handle }}</a>{% endfor %}
+                </p>
+            </div>
+        </div>
+    </footer>

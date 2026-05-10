@@ -1231,3 +1231,24 @@ h3 { font-family: var(--font-family); font-weight: 600; letter-spacing: -0.01em;
 .breadcrumbs-nav a:hover { color: var(--primary-color); }
 .breadcrumbs-nav li[aria-current] { color: var(--dark-color); font-weight: 500; }
 
+/* IG chip + Running links */
+.ig-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background: linear-gradient(135deg, #fce4ec 0%, #fff3e0 100%);
+    border: 1px solid rgba(225, 48, 108, 0.3);
+    color: #c2185b;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.ig-chip:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(225, 48, 108, 0.2); color: #c2185b; }
+.about-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 16px; }
+
+.running-links { display: flex; flex-wrap: wrap; gap: 16px; margin: 10px 0 18px; }
+.running-link { color: var(--accent-runner); font-weight: 600; font-size: 0.95rem; }
+.running-link:hover { color: #ffaa6b; }
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ lang or 'en' }}">
+<head>
+{% include "partials/head.njk" %}
+</head>
+<body>
+{% include "partials/header.en.njk" %}
+
+<main>
+{{ content | safe }}
+</main>
+
+{% include "partials/footer.en.njk" %}
+
+{% set waUrlSticky = "https://wa.me/" + site.whatsappNumber + "?text=" + ("Hi, I would like to ask about invisible aligners." | urlencode) %}
+<div class="sticky-cta-mobile" aria-label="Quick actions">
+    <a href="{{ waUrlSticky }}" target="_blank" rel="noopener" class="cta-wa" data-cta="whatsapp-sticky-mobile-en" aria-label="WhatsApp">
+        <img src="/img/WhatsApp.svg" alt="" class="whatsapp-icon" loading="lazy"> WhatsApp
+    </a>
+    <a href="{{ site.smileViewUrl }}?utm_source=site&utm_medium=sticky&utm_campaign=smileview&utm_content=sticky-mobile-en" target="_blank" rel="noopener" class="cta-sv" data-cta="smileview-sticky-mobile-en" aria-label="SmileView">
+        ✨ Preview your smile
+    </a>
+</div>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
