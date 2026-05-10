@@ -1276,6 +1276,34 @@ h3 { font-family: var(--font-family); font-weight: 600; letter-spacing: -0.01em;
 .lang-switch { background: var(--soft-bg); font-weight: 600; font-size: 0.86rem !important; }
 .lang-switch:hover { background: var(--primary-color-soft); color: var(--primary-color) !important; }
 
+/* NomadAligners Express callout */
+.express-card {
+    background: linear-gradient(135deg, var(--primary-color-soft) 0%, #fff7ed 100%);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--radius-lg);
+    padding: 36px 40px;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+}
+.express-card::after {
+    content: '🚀';
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-size: 3.5rem;
+    opacity: 0.15;
+    pointer-events: none;
+    transform: rotate(15deg);
+}
+.express-steps { list-style: none; padding: 0; margin: 18px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px 24px; }
+.express-steps li { padding: 6px 0; color: var(--text-color); border-left: 3px solid var(--primary-color); padding-left: 12px; }
+.express-steps li strong { display: block; color: var(--primary-color-dark); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2px; }
+@media (max-width: 768px) {
+    .express-card { padding: 28px 24px; }
+    .express-card::after { font-size: 2.5rem; top: 20px; right: 20px; }
+}
+
 /* === Subtle entry animations === */
 @keyframes fadeUp {
     from { opacity: 0; transform: translateY(16px); }

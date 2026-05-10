@@ -23,8 +23,26 @@ faqs:
 {% set waText = "Hola, vivo en el interior y quiero saber más sobre el plan SmileRunners para mi ciudad." | urlencode %}
 {% set waUrl = "https://wa.me/" + site.whatsappNumber + "?text=" + waText %}
 
+<section class="container express-banner" style="padding: 3rem 0 3.5rem;">
+    <div class="express-card">
+        <span class="eyebrow" style="color: var(--accent-warm);">🚀 NomadAligners Express</span>
+        <h2 style="margin-bottom: 12px;">Escaneo hoy, alineadores en 5 días</h2>
+        <p style="max-width: 720px;">Para viajeros y pacientes en tránsito por Buenos Aires. Hacés el escaneo digital en tu primera visita y te llevás los primeros alineadores en <strong>5 días</strong>. Salís de la ciudad con el tratamiento ya iniciado, y seguimos por teleconsulta + envío internacional de los siguientes juegos.</p>
+        <ul class="express-steps">
+            <li><strong>Día 1</strong> · Consulta + escaneo digital intraoral</li>
+            <li><strong>Día 1–5</strong> · Planificación 3D + fabricación priorizada</li>
+            <li><strong>Día 5</strong> · Te entregamos tus primeros alineadores</li>
+            <li><strong>Después</strong> · Teleconsulta + envío de los siguientes juegos a donde estés</li>
+        </ul>
+        {% set waExpressUrl = "https://wa.me/" + site.whatsappNumber + "?text=" + ("Hola, estoy de paso por Buenos Aires y me interesa el plan NomadAligners Express." | urlencode) %}
+        <div class="cta-row-center" style="justify-content: flex-start; margin-top: 18px;">
+            <a href="{{ waExpressUrl }}" target="_blank" rel="noopener" class="btn btn-primary" data-cta="whatsapp-express">Reservar plan Express</a>
+        </div>
+    </div>
+</section>
+
 <section class="container" style="padding: 3.5rem 0;">
-    <h2 style="text-align:left">Cómo es el workflow</h2>
+    <h2 style="text-align:left">Cómo es el workflow estándar</h2>
     <ol class="process-steps">
         <li><span class="process-step-num">1</span><strong>Consulta inicial</strong><p>Presencial en Palermo Chico o teleconsulta. Vemos tu caso, expectativas y armamos plan.</p></li>
         <li><span class="process-step-num">2</span><strong>Escaneo digital</strong><p>Si venís a BA: lo hacemos acá. Si no: en el partner local con un protocolo claro.</p></li>
