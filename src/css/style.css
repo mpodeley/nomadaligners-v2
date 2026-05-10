@@ -1,28 +1,30 @@
 :root {
-    --primary-color: #2563eb;
-    --primary-color-dark: #1d4ed8;
-    --primary-color-soft: #dbeafe;
-    --accent-color: #14b8a6;
-    --accent-warm: #fb7185;
-    --accent-runner: #fb923c;
-    --secondary-color: #64748b;
-    --light-color: #f8fafc;
-    --soft-bg: #f1f5f9;
-    --white-color: #ffffff;
-    --dark-color: #0f172a;
-    --success-color: #25d366;
-    --text-color: #475569;
-    --muted-color: #94a3b8;
-    --border-color: #e2e8f0;
-    --font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    --primary-color: #0E7C7B;
+    --primary-color-dark: #0A5958;
+    --primary-color-soft: #E6F4F3;
+    --accent-color: #E8B86A;
+    --accent-warm: #F26D5B;
+    --accent-runner: #FF5B14;
+    --secondary-color: #6B7785;
+    --light-color: #F2EFE8;
+    --soft-bg: #F2EFE8;
+    --white-color: #FBFAF7;
+    --card-color: #FFFFFF;
+    --dark-color: #0F1B2D;
+    --success-color: #25D366;
+    --text-color: #2E3A4B;
+    --muted-color: #6B7785;
+    --border-color: #E5E2DA;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-family: 'Inter', 'Montserrat', system-ui, -apple-system, sans-serif;
     --header-height: 72px;
-    --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
-    --shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
-    --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
-    --shadow-lg: 0 16px 40px rgba(15, 23, 42, 0.10);
-    --radius-sm: 8px;
-    --radius: 14px;
-    --radius-lg: 22px;
+    --shadow-sm: 0 1px 2px rgba(15, 27, 45, 0.04);
+    --shadow: 0 4px 12px rgba(15, 27, 45, 0.06);
+    --shadow-md: 0 8px 24px rgba(15, 27, 45, 0.08);
+    --shadow-lg: 0 20px 40px -20px rgba(14, 124, 123, 0.25);
+    --radius-sm: 12px;
+    --radius: 20px;
+    --radius-lg: 24px;
 }
 
 /* --- Resets y Estilos Globales --- */
@@ -895,5 +897,122 @@ details[open] .faq-question::after { transform: translateY(-50%) rotate(45deg); 
 /* Reduce motion */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* === v2 DESIGN PASS 2 — design-brief application === */
+
+body { background: var(--white-color); font-family: var(--font-family); }
+
+/* Headings con Fraunces serif */
+h1, h2 { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.02em; line-height: 1.1; }
+h1 { font-size: clamp(2.4rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.9rem, 3.5vw, 2.6rem); margin-bottom: 0.6em; }
+h3 { font-family: var(--font-family); font-weight: 600; letter-spacing: -0.01em; }
+.hero h1 em, h1 em, h2 em { font-style: italic; color: var(--primary-color); }
+
+/* Hero refrescado — sin gradient azul */
+.hero { background: var(--white-color); }
+.hero-lead { color: var(--text-color); }
+
+/* Container más íntimo */
+.container { max-width: 1180px; padding: 0 clamp(20px, 5vw, 48px); }
+
+/* Bite-options: grid balanceado 3-col desktop, 2-col mobile */
+.bite-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 880px;
+    margin: 0 auto;
+}
+@media (max-width: 768px) { .bite-options { grid-template-columns: repeat(2, 1fr); gap: 14px; } }
+@media (max-width: 420px) { .bite-options { grid-template-columns: 1fr; } }
+
+.bite-option {
+    background: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 18px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s;
+}
+.bite-option:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+.bite-option img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 12px;
+}
+.bite-option span { font-weight: 600; color: var(--dark-color); font-size: 0.95rem; }
+
+/* "No estoy seguro" más limpio */
+.bite-option-unknown {
+    grid-column: 1 / -1;
+    background: var(--primary-color-soft);
+    border: 1px dashed var(--primary-color);
+    padding: 22px 24px;
+    text-align: center;
+}
+.bite-option-unknown:hover { background: var(--primary-color-soft); border-color: var(--primary-color-dark); }
+.bite-option-unknown span { color: var(--primary-color-dark); }
+
+/* Promo box adaptado a paleta nueva */
+.promo-box { background: var(--soft-bg); border: 1px solid var(--border-color); }
+
+/* Botón primario con teal nuevo */
+.btn-primary { background: var(--primary-color); color: var(--white-color); }
+.btn-primary:hover { background: var(--primary-color-dark); }
+.btn-secondary { background: var(--card-color); }
+
+/* Header glass adapta al fondo off-white */
+.header { background: rgba(251, 250, 247, 0.85); border-bottom: 1px solid var(--border-color); }
+
+/* Section-alt taupe muy claro */
+.section-alt { background: var(--soft-bg); }
+.running { background: linear-gradient(180deg, var(--white-color) 0%, var(--soft-bg) 100%); }
+
+/* Process step number teal */
+.process-step-num { background: var(--primary-color); }
+.process-steps li { background: var(--card-color); }
+
+/* Testimonial cards más logradas */
+.testimonial-card { background: var(--card-color); border: 1px solid var(--border-color); }
+.testimonial-card::before { color: var(--primary-color); }
+
+/* FAQ tweaks */
+.faq-question::after { color: var(--primary-color); }
+
+/* Details panel resultado evaluador */
+.details-section { background: var(--card-color); border: 1px solid var(--border-color); }
+.details-section h3 { font-family: var(--font-display); font-weight: 500; color: var(--primary-color); font-size: 1.7rem; letter-spacing: -0.015em; }
+
+/* CTA "smileview" gradient warm 2026 */
+.btn-smileview { background: linear-gradient(135deg, #FF5B14 0%, #F26D5B 50%, #E8B86A 100%); box-shadow: 0 6px 18px rgba(242, 109, 91, 0.28); }
+.btn-smileview:hover { box-shadow: 0 12px 28px rgba(242, 109, 91, 0.4); }
+
+/* Eyebrow */
+.eyebrow { color: var(--primary-color); font-family: var(--font-family); letter-spacing: 0.18em; }
+.running .eyebrow { color: var(--accent-runner); }
+
+/* Sticky CTA refined */
+.sticky-cta-mobile { background: var(--card-color); border-top: 1px solid var(--border-color); }
+
+/* About photo más editorial */
+.about-flex .about-photo {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 4/5;
+    border-radius: var(--radius-lg);
+    object-fit: cover;
+    margin: 0;
+}
+@media (max-width: 768px) {
+    .about-flex .about-photo { max-width: 240px; aspect-ratio: 4/5; height: auto; }
 }
 
