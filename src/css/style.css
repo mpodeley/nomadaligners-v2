@@ -1016,3 +1016,35 @@ h3 { font-family: var(--font-family); font-weight: 600; letter-spacing: -0.01em;
     .about-flex .about-photo { max-width: 240px; aspect-ratio: 4/5; height: auto; }
 }
 
+/* Footer redesigned — multi-column structured */
+.footer { background: var(--dark-color); color: rgba(255, 255, 255, 0.78); padding: 64px 0 28px; text-align: left; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 36px 48px; margin-bottom: 40px; }
+.footer-col-title { font-family: var(--font-family); font-size: 0.78rem; font-weight: 600; color: rgba(255, 255, 255, 0.55); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 16px; padding-bottom: 0; border: none; }
+.footer-col ul { list-style: none; padding: 0; margin: 0; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { color: rgba(255, 255, 255, 0.88); font-size: 0.94rem; opacity: 1; transition: color 0.2s; }
+.footer-col a:hover { color: var(--accent-color); }
+.footer-bottom { padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.10); display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; }
+.footer-bottom p { margin: 0; font-size: 0.88rem; }
+.footer-bottom .social-links a { color: rgba(255, 255, 255, 0.9); }
+@media (max-width: 600px) {
+    .footer { text-align: left; }
+    .footer-bottom { justify-content: flex-start; }
+}
+
+/* Nav cleanup — sin dropdowns, items en línea */
+.nav-menu { gap: 8px; }
+.nav-menu li { margin: 0; }
+.nav-menu li > a {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 999px;
+    transition: background 0.2s, color 0.2s;
+}
+.nav-menu li > a::after { display: none; }
+.nav-menu li > a:hover { background: var(--primary-color-soft); color: var(--primary-color); }
+/* En mobile el menu hamburguesa muestra items con su padding original */
+@media (max-width: 991px) {
+    .nav-menu li > a { display: block; padding: 12px 16px; border-radius: 10px; }
+}
+

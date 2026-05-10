@@ -1,9 +1,14 @@
 {
   "main": [
     { "label": "Evaluá tu mordida", "url": "/#evalua" },
+    { "label": "Precios", "url": "/ortodoncia-invisible-precios/" },
+    { "label": "Nosotros", "url": "/nosotros/" },
+    { "label": "Contacto", "url": "/#contacto" }
+  ],
+  "footerGroups": [
     {
-      "label": "Casos",
-      "dropdown": [
+      "title": "Casos",
+      "links": [
         { "label": "Apiñamiento", "url": "/apinamiento-alineadores/" },
         { "label": "Diastemas", "url": "/diastemas-alineadores/" },
         { "label": "Mordida cruzada", "url": "/mordida-cruzada-alineadores/" },
@@ -12,19 +17,20 @@
       ]
     },
     {
-      "label": "Zonas",
-      "dropdown": [
+      "title": "Zonas",
+      "links": [
         { "label": "Palermo (CABA)", "url": "/alineadores-invisibles-palermo/" },
         { "label": "Zona Norte", "url": "/alineadores-invisibles-zona-norte/" },
         { "label": "Teleconsulta / Interior", "url": "/teleconsulta-ortodoncia/" }
       ]
     },
-    { "label": "Precios", "url": "/ortodoncia-invisible-precios/" },
-    { "label": "Nosotros", "url": "/nosotros/" }
-  ],
-  "footer": [
-    { "label": "Ejercicios Fonoaudiología", "url": "/fonoaudiologia.html" },
-    { "label": "Instructivo Blanqueamiento", "url": "/blanqueamiento.html" },
-    { "label": "Uso de Contenciones", "url": "/contenciones.html" }
+    {
+      "title": "Para pacientes en tratamiento",
+      "links": [
+        { "label": "Ejercicios Fonoaudiología", "url": "/fonoaudiologia.html" },
+        { "label": "Instructivo Blanqueamiento", "url": "/blanqueamiento.html" },
+        { "label": "Uso de Contenciones", "url": "/contenciones.html" }
+      ]
+    }
   ]
 }

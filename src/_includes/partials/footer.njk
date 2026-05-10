@@ -1,16 +1,20 @@
     <footer class="footer">
         <div class="container">
-            {% if nav.footer %}
-            <nav class="footer-nav" aria-label="Recursos para pacientes">
-                <p class="footer-nav-title">Para pacientes en tratamiento:</p>
-                <ul>
-                    {% for item in nav.footer %}<li><a href="{{ item.url }}">{{ item.label }}</a></li>{% endfor %}
-                </ul>
-            </nav>
+            {% if nav.footerGroups %}
+            <div class="footer-grid">
+                {% for group in nav.footerGroups %}
+                <nav class="footer-col" aria-label="{{ group.title }}">
+                    <h3 class="footer-col-title">{{ group.title }}</h3>
+                    <ul>
+                        {% for link in group.links %}<li><a href="{{ link.url }}">{{ link.label }}</a></li>{% endfor %}
+                    </ul>
+                </nav>
+                {% endfor %}
+            </div>
             {% endif %}
-            <p>© <span id="year"></span> {{ site.name }} | {{ site.doctorName }}. Todos los derechos reservados.</p>
-            <div class="social-links">
-                <p>📷 {% for ig in site.instagram %}<a href="{{ ig.url }}" target="_blank" rel="noopener">{{ ig.handle }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+            <div class="footer-bottom">
+                <p>© <span id="year"></span> {{ site.name }} · {{ site.doctorName }}</p>
+                <p class="social-links">📷 {% for ig in site.instagram %}<a href="{{ ig.url }}" target="_blank" rel="noopener">{{ ig.handle }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
             </div>
         </div>
     </footer>
