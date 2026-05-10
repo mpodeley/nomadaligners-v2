@@ -1,0 +1,38 @@
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}{% if title_suffix !== false %} | {{ site.name }}{% endif %}</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="canonical" href="{{ site.baseUrl }}{{ page.url }}">
+    <meta name="robots" content="{{ robots or 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1' }}">
+    <meta name="theme-color" content="{{ site.themeColor }}">
+
+    <link rel="icon" href="/img/favicon.png" type="image/png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <meta property="og:locale" content="{{ site.ogLocale }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:title" content="{{ ogTitle or title }}{% if title_suffix !== false %} | {{ site.name }}{% endif %}">
+    <meta property="og:description" content="{{ ogDescription or description }}">
+    <meta property="og:url" content="{{ site.baseUrl }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.baseUrl }}{{ ogImage or site.ogImage }}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ ogTitle or title }}{% if title_suffix !== false %} | {{ site.name }}{% endif %}">
+    <meta name="twitter:description" content="{{ ogDescription or description }}">
+    <meta name="twitter:image" content="{{ site.baseUrl }}{{ ogImage or site.ogImage }}">
+
+    <script type="application/ld+json">{{ schema.dentist | jsonify | safe }}</script>
+    <script type="application/ld+json">{{ schema.person | jsonify | safe }}</script>
+    {% if faqs %}
+    <script type="application/ld+json">{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{% for f in faqs %}{ "@type": "Question", "name": {{ f.q | jsonify | safe }}, "acceptedAnswer": { "@type": "Answer", "text": {{ f.a | jsonify | safe }} } }{% if not loop.last %},{% endif %}{% endfor %}] }</script>
+    {% endif %}
+    {% if extraSchema %}
+      {% for s in extraSchema %}
+    <script type="application/ld+json">{{ s | jsonify | safe }}</script>
+      {% endfor %}
+    {% endif %}

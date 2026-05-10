@@ -1,0 +1,55 @@
+{
+  "name": "NomadAligners",
+  "tagline": "Ortodoncia invisible y estética dental en Palermo",
+  "doctorName": "Dra. Daniela Tkach",
+  "doctorJobTitle": "Ortodoncista",
+  "yearsExperience": 17,
+  "baseUrl": "https://nomadaligners.com",
+  "defaultLang": "es-AR",
+  "ogLocale": "es_AR",
+
+  "phone": "+54 9 11 2889 2043",
+  "phoneTel": "+541128892043",
+  "phoneShort": "11 2889 2043",
+  "whatsappNumber": "5491128892043",
+  "whatsappDefaultText": "Hola, quisiera consultar sobre alineadores invisibles.",
+
+  "email": "hola@nomadaligners.com",
+  "emailNote": "Alias en Porkbun → forwarding a carillascastelar@gmail.com",
+
+  "docturnoUrl": "https://paciente.docturno.com/agenda/ortodonciafast/tkach-daniela?originType=clinic-page&",
+  "smileViewUrl": "https://providerbio-latam.invisalign.com/sv/c22755130",
+  "smileViewLabel": "Probá tu nueva sonrisa en 60s",
+  "triviaUrl": "https://trivia.nomadaligners.com",
+
+  "address": {
+    "street": "República de la India 2731",
+    "neighborhood": "Palermo Chico",
+    "locality": "Buenos Aires",
+    "region": "CABA",
+    "country": "AR",
+    "full": "República de la India 2731, Palermo Chico, Buenos Aires"
+  },
+
+  "geo": {
+    "latitude": -34.5809965,
+    "longitude": -58.4164512
+  },
+
+  "place": {
+    "hex": "0x95bcb8abae13d9c5:0x123fde5539a3430",
+    "modernId": "TODO_DERIVE_FROM_PLACE_ID_FINDER"
+  },
+
+  "priceRange": "$1.300.000+",
+  "priceFromArs": "$1.300.000",
+  "includesBlanqueamiento": true,
+
+  "instagram": [
+    { "handle": "@ortodonciafast", "url": "https://www.instagram.com/ortodonciafast/" },
+    { "handle": "@smilerunners", "url": "https://www.instagram.com/smilerunners/" }
+  ],
+
+  "ogImage": "/img/nomad-hero.jpg",
+  "themeColor": "#007bff"
+}

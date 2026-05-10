@@ -1,0 +1,14 @@
+{# Reusable CTA buttons. Pass `variant`: hero | section | contact #}
+{% set waText = waText or site.whatsappDefaultText %}
+{% set waUrl = "https://wa.me/" + site.whatsappNumber + "?text=" + (waText | urlencode) %}
+<div class="contact-buttons{% if marginTop %} contact-buttons-mt{% endif %}">
+    <a href="{{ site.docturnoUrl }}" target="_blank" rel="noopener" class="btn btn-primary" data-cta="docturno-{{ variant or 'section' }}">{{ docturnoLabel or "Agendar turno" }}</a>
+    <a href="{{ waUrl }}" target="_blank" rel="noopener" class="btn btn-secondary btn-whatsapp-contact" data-cta="whatsapp-{{ variant or 'section' }}">
+        <img src="/img/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon" loading="lazy"> {{ waLabel or "WhatsApp" }}
+    </a>
+    {% if showSmileView %}
+    <a href="{{ site.smileViewUrl }}?utm_source=site&utm_medium=cta&utm_campaign=smileview&utm_content={{ variant or 'section' }}" target="_blank" rel="noopener" class="btn btn-smileview" data-cta="smileview-{{ variant or 'section' }}">
+        ✨ {{ site.smileViewLabel }}
+    </a>
+    {% endif %}
+</div>

@@ -1,0 +1,14 @@
+{
+  "name": "nomadaligners-v2",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sitio v2 de NomadAligners — ortodoncia invisible y estética dental (CABA)",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve --quiet",
+    "dev": "eleventy --serve --quiet"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.5"
+  }
+}

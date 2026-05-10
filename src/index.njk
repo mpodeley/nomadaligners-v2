@@ -1,0 +1,295 @@
+---
+layout: layouts/base.njk
+title: Alineadores invisibles en Palermo y Zona Norte
+title_suffix: true
+description: "Ortodoncia invisible con alineadores transparentes en Palermo (CABA) y para pacientes de Zona Norte (San Isidro, Martínez, Vicente López, Olivos). Escaneo digital, planificación y seguimiento. Turnos online o WhatsApp."
+permalink: /
+faqs:
+  - q: "¿El tratamiento con alineadores invisibles duele?"
+    a: "Es normal sentir una leve presión o molestia los primeros días al cambiar a un nuevo juego de alineadores, especialmente las primeras horas. Esta sensación indica que los alineadores están funcionando y es temporal y manejable."
+  - q: "¿Cuánto tiempo dura el tratamiento?"
+    a: "La duración varía según la complejidad de cada caso, generalmente desde los 6 meses hasta 24 meses o más en situaciones complejas. Te daremos una estimación precisa del tiempo en tu evaluación inicial después del escaneo digital."
+  - q: "¿Puedo comer y beber con los alineadores puestos?"
+    a: "No debes comer con los alineadores puestos. Puedes tomar bebidas como café, mate o gaseosas siempre que no estén muy calientes, ya que el calor podría deformarlos. Lo ideal es beber solo agua fría o natural con ellos puestos. Para otras bebidas, es mejor retirarlos."
+  - q: "¿Cómo se limpian los alineadores?"
+    a: "Límpialos con un cepillo de cerdas suaves (diferente al que usas para tus dientes) y agua fría o tibia. No uses pasta dental, ya que puede rayarlos y opacarlos. Puedes usar pastillas limpiadoras efervescentes específicas disueltas en agua fría. Guárdalos siempre en su caja cuando no los uses para evitar que se manchen o tomen olor."
+  - q: "¿Necesitaré usar retenedores después?"
+    a: "Sí, el uso de retenedores (fijos o removibles, según el caso) es fundamental después de finalizar el tratamiento con alineadores para mantener los resultados obtenidos a largo plazo y evitar que los dientes vuelvan a moverse."
+  - q: "¿Cuántas horas al día debo usar los alineadores?"
+    a: "Es fundamental usarlos al menos 22 horas al día para asegurar la efectividad y rapidez del tratamiento. El compromiso con las horas de uso es clave para el éxito."
+  - q: "¿Qué pasa si un día los usé menos horas?"
+    a: "Si algún día no cumpliste las 22 horas, puedes compensarlo usando ese mismo juego de alineadores un día adicional antes de pasar al siguiente par."
+  - q: "¿Puedo hablar normalmente con los alineadores?"
+    a: "Sí. Al principio puedes notar un leve cambio en la pronunciación o sentir los alineadores un poco extraños, pero te adaptarás muy rápidamente en pocos días."
+  - q: "¿Qué hago si voy a viajar?"
+    a: "Avísanos con anticipación. Podemos entregarte los juegos de alineadores siguientes y darte las indicaciones para los cambios durante tu viaje, asegurando la continuidad del tratamiento."
+  - q: "¿Son importantes los controles? ¿Pueden ser remotos?"
+    a: "Sí, los controles periódicos son obligatorios y cruciales para verificar que el tratamiento avanza correctamente. Ofrecemos la posibilidad de realizar seguimientos mediante teleconsulta online, que tienen la misma validez e importancia que las visitas presenciales para monitorear tu progreso."
+  - q: "¿Qué son los 'chewies' o mordedores?"
+    a: "Son pequeños cilindros de silicona que te entregamos. Morderlos suavemente ayuda a que los alineadores se asienten correctamente sobre los dientes y los atachments, asegurando que ejerzan la presión adecuada. Es recomendable usarlos unos minutos cada vez que te colocas los alineadores."
+---
+{% set waUrl = "https://wa.me/" + site.whatsappNumber + "?text=" + (site.whatsappDefaultText | urlencode) %}
+
+<section id="inicio" class="hero">
+    <div class="container hero-content hero-flex-container">
+        <div class="hero-text-content">
+            <h1>Alineadores invisibles en Palermo y Zona Norte</h1>
+            <p>Descubrí cómo los alineadores transparentes pueden darte la sonrisa que siempre quisiste, de forma cómoda y discreta en Palermo (CABA) y con atención pensada para pacientes de Zona Norte.</p>
+
+            <div class="promo-box">
+                <p class="price-highlight">✨ Tratamientos desde <strong>{{ site.priceFromArs }}</strong></p>
+                <p class="financing-text">💳 Financiación disponible con tarjetas de crédito</p>
+                <p class="bonus-text">🎁 <strong>¡Incluye Blanqueamiento de regalo!</strong></p>
+            </div>
+            <div class="container">
+                <img src="/img/nomad-hero.jpg" alt="Alineadores transparentes NomadAligners" class="hero-image" loading="eager" width="1200" height="675">
+            </div>
+
+            <div class="hero-cta-row">
+                <a href="#evalua" class="btn btn-primary" data-cta="evaluador-hero">Comenzá tu evaluación</a>
+                <a href="{{ site.docturnoUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-cta="docturno-hero">Agendar turno</a>
+                <a href="{{ waUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-whatsapp-contact" data-cta="whatsapp-hero">
+                    <img src="/img/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon" loading="lazy"> WhatsApp
+                </a>
+                <a href="{{ site.smileViewUrl }}?utm_source=site&utm_medium=cta&utm_campaign=smileview&utm_content=hero" target="_blank" rel="noopener noreferrer" class="btn btn-smileview" data-cta="smileview-hero">
+                    ✨ {{ site.smileViewLabel }}
+                </a>
+            </div>
+
+            <div class="quick-quote">
+                <h2 class="h2-left">Cotizá en 2 minutos</h2>
+                <p class="small muted">Te damos una orientación rápida. El valor final se confirma con evaluación y plan digital.</p>
+
+                <form id="quoteForm" class="quote-form" aria-label="Cotización rápida">
+                    <label>
+                        ¿Qué querés corregir?
+                        <select name="motivo" required>
+                            <option value="" disabled selected>Elegí una opción</option>
+                            <option>Apiñamiento</option>
+                            <option>Diastemas (dientes separados)</option>
+                            <option>Mordida cruzada</option>
+                            <option>Sobremordida</option>
+                            <option>Mordida abierta</option>
+                            <option>Prognatismo</option>
+                            <option>Otro / no estoy seguro</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        ¿En qué zona estás?
+                        <select name="zona" required>
+                            <option value="" disabled selected>Elegí una opción</option>
+                            <option>CABA</option>
+                            <option>Zona Norte</option>
+                            <option>Zona Oeste</option>
+                            <option>Zona Sur</option>
+                            <option>Interior / exterior</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Edad
+                        <select name="edad" required>
+                            <option value="" disabled selected>Elegí una opción</option>
+                            <option>Menos de 18</option>
+                            <option>18–29</option>
+                            <option>30–39</option>
+                            <option>40–49</option>
+                            <option>50+</option>
+                        </select>
+                    </label>
+
+                    <button class="btn btn-primary" type="submit">Pedir cotización por WhatsApp</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="seo-links" class="section-alt">
+    <div class="container">
+        <h2>Guías rápidas</h2>
+        <p style="text-align:center; max-width: 780px; margin: 0 auto 30px;">Si querés entender tu caso en 3 minutos, elegí una guía:</p>
+        <div class="features-grid">
+            <div class="feature">
+                <h3><a href="/alineadores-invisibles-zona-norte/">Zona Norte</a></h3>
+                <p>Plan cómodo para pacientes de San Isidro, Martínez, Vicente López, Olivos y alrededores.</p>
+            </div>
+            <div class="feature">
+                <h3><a href="/apinamiento-alineadores/">Apiñamiento</a></h3>
+                <p>Dientes "montados" y falta de espacio.</p>
+            </div>
+            <div class="feature">
+                <h3><a href="/diastemas-alineadores/">Diastemas</a></h3>
+                <p>Espacios entre dientes y cómo cerrarlos.</p>
+            </div>
+            <div class="feature">
+                <h3><a href="/mordida-cruzada-alineadores/">Mordida cruzada</a></h3>
+                <p>Corrección para evitar desgaste y sobrecarga.</p>
+            </div>
+            <div class="feature">
+                <h3><a href="/sobremordida-mordida-abierta-prognatismo/">Sobremordida / abierta / clase III</a></h3>
+                <p>Casos más complejos: estrategia y auxiliares.</p>
+            </div>
+            <div class="feature">
+                <h3><a href="/ortodoncia-invisible-precios/">Precios</a></h3>
+                <p>Qué incluye el plan y de qué depende el valor.</p>
+            </div>
+            <div class="feature">
+                <h3><a href="/teleconsulta-ortodoncia/">Teleconsulta</a></h3>
+                <p>Seguimiento remoto si vivís lejos o viajás.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="evalua" class="evaluator">
+    <div class="container">
+        <h2>¿Cómo es tu mordida?</h2>
+        <p>Selecciona la opción que más se parezca a tu sonrisa o si no estás seguro:</p>
+        <div class="bite-options">
+            <button class="bite-option" data-pathology="apiñamiento">
+                <img src="/img/apinamiento.jpg" alt="Apiñamiento" loading="lazy">
+                <span>Apiñamiento</span>
+            </button>
+            <button class="bite-option" data-pathology="diastemas">
+                <img src="/img/espaciamientoexcesivo.jpg" alt="Diastemas" loading="lazy">
+                <span>Diastemas</span>
+            </button>
+            <button class="bite-option" data-pathology="mordida_cruzada">
+                <img src="/img/mordidacruzada.jpg" alt="Mordida Cruzada" loading="lazy">
+                <span>Mordida Cruzada</span>
+            </button>
+            <button class="bite-option" data-pathology="sobremordida">
+                <img src="/img/sobremordida.jpg" alt="Sobremordida" loading="lazy">
+                <span>Sobremordida</span>
+            </button>
+            <button class="bite-option" data-pathology="mordida_abierta">
+                <img src="/img/mordidaabierta.jpg" alt="Mordida Abierta" loading="lazy">
+                <span>Mordida Abierta</span>
+            </button>
+            <button class="bite-option" data-pathology="prognatismo">
+                <img src="/img/mordidainferior.jpg" alt="Prognatismo" loading="lazy">
+                <span>Prognatismo</span>
+            </button>
+            <button class="bite-option" data-pathology="unknown">
+                <span>No sé / Otro</span>
+            </button>
+        </div>
+
+        <div id="details" class="details-section" style="display: none;"></div>
+    </div>
+</section>
+
+<section id="tratamiento" class="treatment">
+    <div class="container">
+        <h2>Nuestro Enfoque: Alineadores Invisibles</h2>
+        <p>Nos especializamos en tratamientos de ortodoncia con alineadores transparentes, la opción más moderna y estética, utilizando planificación digital personalizada. <strong>¡Comenzá rápido! Escaneo digital en tu 1ra visita, y en la 2da ya te llevás tus primeros alineadores.</strong></p>
+        <ul>
+            <li><img src="/img/icon-check.svg" alt="check"> Prácticamente Invisible</li>
+            <li><img src="/img/icon-check.svg" alt="check"> Cómodo y Removible</li>
+            <li><img src="/img/icon-check.svg" alt="check"> ¡Alineadores listos en 10 días!</li>
+            <li><img src="/img/icon-check.svg" alt="check"> Seguimiento remoto con Teleconsulta</li>
+            <li><img src="/img/icon-check.svg" alt="check"> Fácil de Limpiar</li>
+            <li><img src="/img/icon-check.svg" alt="check"> Con Resultados Predecibles</li>
+            <li><img src="/img/icon-check.svg" alt="check"> ¡Blanqueamiento de Regalo al iniciar!</li>
+            <li><img src="/img/icon-check.svg" alt="check"> Proceso Eficiente: Escaneo 1ª cita, ¡Inicio en la 2ª!</li>
+        </ul>
+        <p>Creemos que la odontología es una inversión en calidad de vida, por eso buscamos que nuestros tratamientos sean accesibles.</p>
+        <a href="{{ waUrl }}" target="_blank" class="btn btn-secondary" data-cta="whatsapp-tratamiento">Más Info por WhatsApp</a>
+    </div>
+</section>
+
+<section id="nosotros" class="about">
+    <div class="container">
+        <h2>Conoce a la Dra. Daniela Tkach y Nuestro Enfoque Integral</h2>
+        <img src="/img/dani_tkach.jpg" alt="Dra. Daniela Tkach" class="about-photo" loading="lazy">
+        <p>Enfoque integral, especialista en ortodoncia, {{ site.yearsExperience }} años de experiencia.</p>
+        <p>Nuestro consultorio en Palermo Chico es un espacio moderno y cómodo, equipado con la última tecnología, diseñado para que tu experiencia sea tan placentera como efectiva.</p>
+        <p>Además de ser especialistas en ortodoncia invisible, ofrecemos <strong>servicios de odontología general</strong> para cuidar tu salud bucal de forma completa.</p>
+
+        <h3 style="margin-top: 1.5em; margin-bottom: 0.5em;">Odontología General y Especialidades</h3>
+        <ul>
+            <li><img src="/img/icon-check.svg" alt="check"> Coronas de porcelana pura (escáner + instalación en 7 días).</li>
+            <li><img src="/img/icon-check.svg" alt="check"> Prótesis y rehabilitación.</li>
+            <li><img src="/img/icon-check.svg" alt="check"> Limpieza periodontal con periodoncista.</li>
+            <li><img src="/img/icon-check.svg" alt="check"> Implantología.</li>
+            <li><img src="/img/icon-check.svg" alt="check"> Todas las especialidades en el consultorio.</li>
+        </ul>
+        <p>Contamos con un <strong>equipo interdisciplinario</strong> que nos permite abordar cada caso con una visión integral, asegurando los mejores resultados funcionales y estéticos.</p>
+    </div>
+</section>
+
+<section id="testimonios" class="testimonials">
+    <div class="container">
+        <h2>Lo que dicen nuestros pacientes</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <blockquote>
+                    "Kiara no le gustaban los dentistas, pero logramos que se involucre en el tratamiento, eso se reflejó en compromiso y confianza. ¡Felices con los resultados de la Ortodoncia Invisible!"
+                </blockquote>
+                <p class="testimonial-author">- Familia de Kiara</p>
+            </div>
+            <div class="testimonial-card">
+                <blockquote>
+                    "El proceso fue mucho más rápido y cómodo de lo que imaginaba. Los alineadores son súper discretos. ¡Valió totalmente la pena!"
+                </blockquote>
+                <p class="testimonial-author">- Martín G.</p>
+            </div>
+            <div class="testimonial-card">
+                <blockquote>
+                    "Excelente atención y profesionalismo. La Dra. Tkach es muy clara y dedicada. ¡Mi sonrisa cambió por completo!"
+                </blockquote>
+                <p class="testimonial-author">- Sofía P.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="running" class="running">
+    <div class="container">
+        <h2>SmileRunners: Beneficios de la ortodoncia para el running</h2>
+        <p>Correr con una mordida equilibrada favorece una mejor respiración y postura. Una dentadura alineada reduce tensiones en la mandíbula y ayuda a evitar molestias en cuello y espalda.</p>
+        <p>Si eres runner y quieres potenciar tu rendimiento, síguenos en <a href="https://www.instagram.com/smilerunners/" target="_blank">@smilerunners</a> para consejos y motivación.</p>
+        <p>Pon a prueba tus conocimientos en nuestra <a href="{{ site.triviaUrl }}" target="_blank">Trivia</a>.</p>
+        <img src="/img/smilerunners.jpg" alt="SmileRunners" class="about-photo" loading="lazy">
+    </div>
+</section>
+
+<section id="faq" class="faq">
+    <div class="container">
+        <h2>Preguntas Frecuentes</h2>
+        {% for f in faqs %}
+        <details class="faq-item">
+            <summary class="faq-question">{{ f.q }}</summary>
+            <p class="faq-answer">{{ f.a }}</p>
+        </details>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="contacto" class="contact">
+    <div class="container">
+        <h2>Agenda tu Consulta / Ubícanos</h2>
+        <p>Da el primer paso hacia tu nueva sonrisa. Contáctanos, agenda tu turno online o visítanos:</p>
+        <div class="contact-info">
+            <p><span style="margin-right: 8px; font-size: 1.2em; display: inline-block; width: 22px; text-align: center;">💬</span><strong>WhatsApp:</strong> <a href="{{ waUrl }}" target="_blank">{{ site.phone }}</a></p>
+            <p><span style="margin-right: 8px; font-size: 1.2em; display: inline-block; width: 22px; text-align: center;">📞</span><strong>Teléfono:</strong> <a href="tel:{{ site.phoneTel }}">{{ site.phoneShort }}</a></p>
+            <p><span style="margin-right: 8px; font-size: 1.2em; display: inline-block; width: 22px; text-align: center;">✉️</span><strong>Email:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+            <p><span style="margin-right:8px;font-size:1.2em;display:inline-block;width:22px;text-align:center;">📷</span><strong>Instagram:</strong>
+                {% for ig in site.instagram %}
+                <a href="{{ ig.url }}" target="_blank" style="display:block;margin-left:30px;">{{ ig.handle }}</a>
+                {% endfor %}
+            </p>
+            <p><span style="margin-right: 8px; font-size: 1.2em; display: inline-block; width: 22px; text-align: center;">📍</span><strong>Dirección:</strong> {{ site.address.full }}</p>
+        </div>
+        <div class="map-widget">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.9698465565392!2d-58.416592967441325!3d-34.58108672973736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f11.1!3m3!1m2!1s0x95bcb8abae13d9c5%3A0x123fde5539a3430!2sest%C3%A9tica%20dental%20y%20ortodoncia!5e0!3m2!1ses-419!2sar!4v1743706829492!5m2!1ses-419!2sar" width="100%" height="450" style="border:0; display:block; margin:0 auto;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p><em><a href="https://www.google.com/maps/search/?api=1&query=Rep%C3%BAblica+de+la+India+2731%2C+Buenos+Aires" target="_blank">(Ver en Google Maps)</a></em></p>
+        </div>
+
+        {% set variant = "contacto" %}
+        {% set marginTop = false %}
+        {% include "partials/cta-buttons.njk" %}
+    </div>
+</section>

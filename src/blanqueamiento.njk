@@ -1,0 +1,55 @@
+---
+layout: layouts/patient-page.njk
+permalink: /blanqueamiento.html
+title: Instructivo de blanqueamiento dental
+description: "Guía para pacientes: cómo usar el kit de blanqueamiento, cuidados y recomendaciones."
+h1: Blanqueamiento Ambulatorio
+lead: "Instrucciones paso a paso para lograr una sonrisa brillante desde casa."
+---
+<style>
+    .step-list { counter-reset: step; list-style: none; padding: 0; }
+    .step-list li { position: relative; padding-left: 50px; margin-bottom: 20px; }
+    .step-list li::before {
+        counter-increment: step;
+        content: counter(step);
+        position: absolute;
+        left: 0; top: 0;
+        width: 35px; height: 35px;
+        background: var(--primary-color, #007bff);
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 35px;
+        font-weight: bold;
+    }
+    .restriction-list li { margin-bottom: 10px; color: #d9534f; }
+</style>
+
+<section class="container" style="padding: 4rem 0;">
+    <h2>Instrucciones de Uso</h2>
+    <p>El momento ideal para realizar el tratamiento es <strong>por la noche</strong>, antes de ir a dormir.</p>
+
+    <ol class="step-list">
+        <li><strong>Preparación:</strong> Cepillate bien los dientes y secá muy bien el alineador antes de colocar el gel.</li>
+        <li><strong>Aplicación del Gel:</strong> Colocá media gota (tamaño de un grano de arroz) en la cara interna del alineador, justo en la zona frontal de cada diente que quieras blanquear.</li>
+        <li><strong>Zona de acción:</strong> Aplicalo generalmente de premolar a premolar. Evitá los molares para no generar sensibilidad innecesaria.</li>
+        <li><strong>Durante la noche:</strong> Dormí con el alineador puesto.</li>
+        <li><strong>A la mañana siguiente:</strong> Retirá el alineador, enjuagá bien tu boca y lavá el alineador con agua fría.</li>
+    </ol>
+
+    <hr>
+
+    <div style="background-color: #f8f9fa; padding: 25px; border-radius: 10px; margin-top: 30px;">
+        <h3>⚠️ Cuidados y Sensibilidad</h3>
+        <p>Es posible sentir sensibilidad transitoria. Si es muy fuerte, interrumpí el uso por 1 o 2 días y luego retomá.</p>
+
+        <h4>Dieta Blanca (Evitar durante el tratamiento):</h4>
+        <ul class="restriction-list">
+            <li>🚫 Café, té, mate y vino tinto.</li>
+            <li>🚫 Bebidas oscuras o gaseosas cola.</li>
+            <li>🚫 Alimentos con colorantes fuertes (salsas, remolacha, etc).</li>
+            <li>🚫 Fumar.</li>
+        </ul>
+        <p><strong>Duración:</strong> Si eres prolijo, la jeringa dura entre 5 y 7 noches.</p>
+    </div>
+</section>

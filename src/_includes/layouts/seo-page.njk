@@ -1,0 +1,48 @@
+---
+layout: layouts/base.njk
+---
+<section class="hero" style="min-height: 45vh; padding-top: 90px;">
+    <div class="container hero-content">
+        <h1>{{ h1 }}</h1>
+        <p>{{ lead | safe }}</p>
+        {% if subLead %}<p class="small muted" style="max-width: 860px; margin: 10px 0 0;">{{ subLead | safe }}</p>{% endif %}
+        {% set variant = "hero" %}
+        {% set marginTop = true %}
+        {% set showSmileView = true %}
+        {% include "partials/cta-buttons.njk" %}
+    </div>
+</section>
+
+{{ content | safe }}
+
+{% if faqs %}
+<section class="faq" style="padding: 60px 0;">
+    <div class="container">
+        <h2>{{ faqsTitle or "Preguntas frecuentes" }}</h2>
+        {% for f in faqs %}
+        <details class="faq-item">
+            <summary class="faq-question">{{ f.q }}</summary>
+            <p class="faq-answer">{{ f.a | safe }}</p>
+        </details>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+<section class="contact" style="padding: 70px 0;">
+    <div class="container">
+        <h2>{{ ctaTitle or "¿Querés que lo veamos?" }}</h2>
+        <p>{{ ctaSubtitle or "Escribinos por WhatsApp o agendá tu evaluación en Palermo." }}</p>
+        {% set variant = "subpage-contact" %}
+        {% set marginTop = false %}
+        {% set showSmileView = true %}
+        {% set docturnoLabel = "Agendar turno online" %}
+        {% set waLabel = "Consultar por WhatsApp" %}
+        {% include "partials/cta-buttons.njk" %}
+        <div class="contact-info" style="margin-top: 30px;">
+            <p><span style="margin-right: 8px; font-size: 1.2em; display: inline-block; width: 22px; text-align: center;">📍</span><strong>Dirección:</strong> {{ site.address.full }}</p>
+            <p><span style="margin-right: 8px; font-size: 1.2em; display: inline-block; width: 22px; text-align: center;">📞</span><strong>Teléfono:</strong> <a href="tel:{{ site.phoneTel }}">{{ site.phone }}</a></p>
+            <p><span style="margin-right: 8px; font-size: 1.2em; display: inline-block; width: 22px; text-align: center;">✉️</span><strong>Email:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        </div>
+    </div>
+</section>

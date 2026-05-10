@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+robots: noindex,nofollow
+---
+<section class="hero" style="min-height: 40vh; padding-top: 100px;">
+    <div class="container hero-content">
+        <h1>{{ h1 }}</h1>
+        <p>{{ lead | safe }}</p>
+    </div>
+</section>
+
+{{ content | safe }}
