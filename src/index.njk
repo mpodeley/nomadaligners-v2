@@ -41,29 +41,7 @@ faqs:
         </div>
     </div>
 
-    <div class="container trust-row" aria-label="Credenciales y trust">
-        <div class="trust-item">
-            <strong>Invisalign</strong>
-            <span>Provider certificado</span>
-        </div>
-        <div class="trust-divider"></div>
-        <div class="trust-item">
-            <strong>{{ site.yearsExperience }}+ años</strong>
-            <span>Experiencia clínica</span>
-        </div>
-        <div class="trust-divider"></div>
-        <div class="trust-item">
-            <strong>Palermo Chico</strong>
-            <span>CABA + Zona Norte + Interior</span>
-        </div>
-        <div class="trust-divider"></div>
-        <div class="trust-item">
-            <a href="{{ site.googleMapsReviewUrl }}" target="_blank" rel="noopener" data-cta="google-reviews-trust">
-                <strong>⭐⭐⭐⭐⭐</strong>
-                <span>Reseñas en Google</span>
-            </a>
-        </div>
-    </div>
+    {% include "partials/trust-row.njk" %}
 </section>
 
 <section id="evalua" class="evaluator">

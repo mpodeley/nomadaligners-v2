@@ -1,0 +1,10 @@
+{% if page.url and page.url !== "/" and h1 %}
+<nav class="breadcrumbs-nav" aria-label="Migas de pan">
+    <div class="container">
+        <ol>
+            <li><a href="/">Inicio</a></li>
+            <li aria-current="page">{{ h1 }}</li>
+        </ol>
+    </div>
+</nav>
+{% endif %}

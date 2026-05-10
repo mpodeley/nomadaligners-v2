@@ -1,7 +1,9 @@
 ---
 layout: layouts/base.njk
 ---
-<section class="hero" style="min-height: 45vh; padding-top: 90px;">
+{% include "partials/breadcrumbs.njk" %}
+
+<section class="hero" style="min-height: 45vh; padding-top: 60px; padding-bottom: 40px;">
     <div class="container hero-content">
         <h1>{{ h1 }}</h1>
         <p>{{ lead | safe }}</p>
