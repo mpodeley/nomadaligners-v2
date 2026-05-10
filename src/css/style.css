@@ -1050,3 +1050,71 @@ h3 { font-family: var(--font-family); font-weight: 600; letter-spacing: -0.01em;
     .nav-menu li > a { display: block; padding: 12px 16px; border-radius: 10px; }
 }
 
+/* === Trust row (bajo hero) === */
+.trust-row {
+    margin-top: 56px;
+    padding: 24px 32px;
+    background: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 18px;
+    box-shadow: var(--shadow-sm);
+}
+.trust-item { text-align: center; }
+.trust-item strong { display: block; color: var(--dark-color); font-size: 1.05rem; font-weight: 600; letter-spacing: -0.01em; }
+.trust-item span { display: block; color: var(--muted-color); font-size: 0.82rem; letter-spacing: 0.02em; margin-top: 2px; }
+.trust-item a { color: inherit; }
+.trust-item a:hover strong { color: var(--primary-color); }
+.trust-divider { width: 1px; height: 30px; background: var(--border-color); }
+@media (max-width: 640px) {
+    .trust-row { padding: 18px 16px; gap: 14px; }
+    .trust-divider { display: none; }
+    .trust-item { flex: 1 1 calc(50% - 14px); min-width: 130px; }
+}
+
+/* === SmileRunners — dark slate sub-mundo === */
+.running {
+    background: var(--dark-color);
+    color: rgba(255, 255, 255, 0.85);
+    position: relative;
+    overflow: hidden;
+}
+.running h2 { color: white; }
+.running p { color: rgba(255, 255, 255, 0.82); }
+.running p strong { color: white; }
+.running .eyebrow { color: var(--accent-runner); margin-left: 12px; }
+.running-bib {
+    display: inline-block;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--accent-runner);
+    letter-spacing: -0.04em;
+    vertical-align: middle;
+}
+.running-ig a { color: var(--accent-runner); font-weight: 600; }
+.running-ig a:hover { color: #ffaa6b; }
+.running-image {
+    border-radius: var(--radius-lg);
+    filter: saturate(0.85) contrast(1.05);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+.btn-runner {
+    background: var(--accent-runner);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-weight: 700;
+    box-shadow: 0 6px 18px rgba(255, 91, 20, 0.35);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.btn-runner:hover { background: #ff7034; color: white; transform: translateY(-2px); box-shadow: 0 10px 26px rgba(255, 91, 20, 0.5); }
+
