@@ -1,13 +1,29 @@
 const site = require("./site.json");
+const services = require("./services.json");
+
+const makesOffer = services.items.map((s) => ({
+  "@type": "Offer",
+  itemOffered: {
+    "@type": "MedicalProcedure",
+    name: s.title,
+    description: s.description,
+    procedureType: "https://schema.org/TherapeuticProcedure",
+  },
+}));
 
 module.exports = {
   dentist: {
     "@context": "https://schema.org",
-    "@type": "Dentist",
+    "@id": site.baseUrl + "#dentist",
+    "@type": ["Dentist", "MedicalBusiness"],
     name: site.name,
+    alternateName: "Estética Dental y Ortodoncia",
+    description:
+      "Ortodoncia invisible y odontología estética en Palermo Chico. Invisalign certified provider. Dirigido por la Dra. Daniela Tkach con 17+ años de experiencia clínica.",
     url: site.baseUrl,
     telephone: site.phone,
     image: [site.baseUrl + site.ogImage],
+    medicalSpecialty: ["Orthodontic", "CosmeticDentistry"],
     address: {
       "@type": "PostalAddress",
       streetAddress: site.address.street,
@@ -35,15 +51,7 @@ module.exports = {
       site.docturnoUrl,
       site.smileViewUrl,
     ],
-    makesOffer: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Ortodoncia invisible con alineadores transparentes",
-        },
-      },
-    ],
+    makesOffer: makesOffer,
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.9",

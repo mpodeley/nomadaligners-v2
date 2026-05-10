@@ -1064,30 +1064,48 @@ h3 { font-family: var(--font-family); font-weight: 600; letter-spacing: -0.01em;
     .nav-menu li > a { display: block; padding: 12px 16px; border-radius: 10px; }
 }
 
-/* === Trust row (bajo hero) === */
-.trust-row {
-    margin-top: 56px;
-    padding: 24px 32px;
-    background: var(--card-color);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius);
+/* === Trust strip (inline meta band) === */
+.trust-strip {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
-    gap: 18px;
-    box-shadow: var(--shadow-sm);
+    gap: 6px 18px;
+    margin-top: 36px;
+    font-size: 0.92rem;
+    color: var(--text-color);
+    line-height: 1.5;
 }
-.trust-item { text-align: center; }
-.trust-item strong { display: block; color: var(--dark-color); font-size: 1.05rem; font-weight: 600; letter-spacing: -0.01em; }
-.trust-item span { display: block; color: var(--muted-color); font-size: 0.82rem; letter-spacing: 0.02em; margin-top: 2px; }
-.trust-item a { color: inherit; }
-.trust-item a:hover strong { color: var(--primary-color); }
-.trust-divider { width: 1px; height: 30px; background: var(--border-color); }
+.trust-strip > * {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+.trust-strip > *:not(:first-child)::before {
+    content: '·';
+    color: var(--border-color);
+    font-weight: 700;
+    margin-right: 12px;
+}
+.trust-strip strong { color: var(--dark-color); font-weight: 700; }
+.trust-strip a { color: var(--text-color); transition: color 0.2s; }
+.trust-strip a:hover { color: var(--primary-color); }
 @media (max-width: 640px) {
-    .trust-row { padding: 18px 16px; gap: 14px; }
-    .trust-divider { display: none; }
-    .trust-item { flex: 1 1 calc(50% - 14px); min-width: 130px; }
+    .trust-strip { gap: 4px 14px; font-size: 0.86rem; margin-top: 24px; }
+    .trust-strip > * { flex-basis: 100%; white-space: normal; }
+    .trust-strip > *:not(:first-child)::before { display: none; }
+    .trust-strip > * + * { padding-top: 4px; border-top: 1px solid var(--border-color); margin-top: 4px; }
+}
+
+/* Legacy .trust-row alias — old block style (only on subpages that still use it) */
+.trust-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 20px;
+    margin-top: 28px;
+    font-size: 0.92rem;
+    color: var(--text-color);
 }
 
 /* === SmileRunners — dark slate sub-mundo === */
