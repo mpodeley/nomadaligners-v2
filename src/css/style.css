@@ -702,3 +702,69 @@ p {
     :root { --header-height: 60px; }
 }
 
+/* === v2 ADDITIONS — homepage redesign === */
+
+.btn-lg { padding: 16px 36px; font-size: 1.05rem; min-height: 52px; }
+
+.hero-flex-container { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; }
+.hero-text-content { max-width: 100%; }
+.hero-lead { font-size: 1.15rem; line-height: 1.6; margin: 16px 0 28px; max-width: 560px; }
+.hero-cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 12px; }
+.hero-microcopy { margin-top: 6px; font-size: 0.85rem; }
+.hero-image-wrap { display: flex; justify-content: center; }
+.hero-image { width: 100%; max-width: 520px; height: auto; border-radius: 16px; box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+
+@media (max-width: 768px) {
+    .hero-flex-container { grid-template-columns: 1fr; gap: 24px; }
+    .hero-lead { font-size: 1.05rem; }
+    .hero-cta-row .btn { flex: 1; min-width: 140px; }
+}
+
+.section-lead { font-size: 1.05rem; max-width: 720px; margin: 0 auto 32px; text-align: center; color: var(--text-color); }
+.eyebrow { display: inline-block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--primary-color); margin-bottom: 8px; }
+
+.cta-row-center { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; align-items: center; }
+.cta-row-stack { flex-direction: column; align-items: stretch; max-width: 380px; margin: 0 auto; }
+.cta-row-stack .btn { width: 100%; }
+@media (min-width: 600px) { .cta-row-stack { max-width: none; flex-direction: row; justify-content: center; } .cta-row-stack .btn { width: auto; min-width: 200px; } }
+
+/* "No estoy seguro" CTA distinta */
+.bite-option-unknown { grid-column: 1 / -1; background: linear-gradient(135deg, #fff7ed, #fef3c7); border: 1px dashed #c2410c; }
+.bite-option-unknown:hover { background: linear-gradient(135deg, #ffedd5, #fde68a); }
+.bite-option-unknown span { color: #9a3412; font-weight: 600; }
+
+/* Proceso (4 pasos) */
+.process-steps { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; counter-reset: pstep; }
+.process-steps li { background: var(--white-color); padding: 28px 24px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.05); position: relative; }
+.process-step-num { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; background: var(--primary-color); color: white; border-radius: 50%; font-weight: 700; margin-bottom: 14px; }
+.process-steps li strong { display: block; font-size: 1.1rem; color: var(--dark-color); margin-bottom: 6px; }
+.process-steps li p { color: var(--text-color); font-size: 0.95rem; }
+
+/* Running redesign */
+.running-flex { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.running-text h2 { margin-bottom: 12px; }
+.running-image { width: 100%; max-width: 480px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); margin: 0 auto; }
+@media (max-width: 768px) { .running-flex { grid-template-columns: 1fr; } }
+
+/* About redesign */
+.about-flex { display: grid; grid-template-columns: 280px 1fr; gap: 36px; align-items: center; }
+.about-flex .about-photo { width: 280px; height: 280px; object-fit: cover; border-radius: 50%; box-shadow: 0 8px 24px rgba(0,0,0,0.12); margin: 0; }
+.about-flex h2 { margin-bottom: 12px; }
+.about-flex .btn { margin-top: 16px; }
+@media (max-width: 768px) {
+    .about-flex { grid-template-columns: 1fr; text-align: center; }
+    .about-flex .about-photo { width: 200px; height: 200px; margin: 0 auto; }
+}
+
+/* Contacto info grid + map */
+.contact-info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; max-width: 800px; margin: 32px auto; text-align: center; }
+.contact-info-grid p { margin: 0; }
+.map-widget { max-width: 900px; margin: 24px auto 0; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+
+/* Footer secondary nav */
+.footer-nav { margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid rgba(255,255,255,0.12); }
+.footer-nav-title { font-size: 0.85rem; opacity: 0.7; margin-bottom: 8px; }
+.footer-nav ul { display: flex; flex-wrap: wrap; gap: 12px 24px; padding: 0; margin: 0; list-style: none; justify-content: center; }
+.footer-nav a { color: inherit; opacity: 0.85; font-size: 0.9rem; }
+.footer-nav a:hover { opacity: 1; }
+

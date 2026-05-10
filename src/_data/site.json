@@ -49,5 +49,10 @@
   ],
 
   "ogImage": "/img/nomad-hero.jpg",
-  "themeColor": "#007bff"
+  "themeColor": "#007bff",
+
+  "googleMapsShareUrl": "https://maps.app.goo.gl/gfVeAYHje18emCDt7",
+  "googleMapsReviewUrl": "https://maps.app.goo.gl/gfVeAYHje18emCDt7",
+
+  "gaMeasurementId": null
 }

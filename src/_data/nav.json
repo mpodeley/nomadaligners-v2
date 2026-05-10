@@ -1,16 +1,6 @@
 {
   "main": [
-    { "label": "Inicio", "url": "/#inicio" },
-    { "label": "Evalúa", "url": "/#evalua" },
-    { "label": "Tratamiento", "url": "/#tratamiento" },
-    {
-      "label": "Zonas",
-      "dropdown": [
-        { "label": "Palermo (CABA)", "url": "/alineadores-invisibles-palermo/" },
-        { "label": "Zona Norte", "url": "/alineadores-invisibles-zona-norte/" }
-      ]
-    },
-    { "label": "Precios", "url": "/ortodoncia-invisible-precios/" },
+    { "label": "Evaluá tu mordida", "url": "/#evalua" },
     {
       "label": "Casos",
       "dropdown": [
@@ -21,18 +11,20 @@
         { "label": "Invisalign vs alineadores", "url": "/invisalign-vs-alineadores/" }
       ]
     },
-    { "label": "Nosotros", "url": "/nosotros/" },
-    { "label": "Testimonios", "url": "/#testimonios" },
-    { "label": "Teleconsulta", "url": "/teleconsulta-ortodoncia/" },
-    { "label": "Preguntas", "url": "/#faq" },
-    { "label": "Contacto", "url": "/#contacto" },
     {
-      "label": "Pacientes",
+      "label": "Zonas",
       "dropdown": [
-        { "label": "Ejercicios Fonoaudiología", "url": "/fonoaudiologia.html" },
-        { "label": "Instructivo Blanqueamiento", "url": "/blanqueamiento.html" },
-        { "label": "Uso de Contenciones", "url": "/contenciones.html" }
+        { "label": "Palermo (CABA)", "url": "/alineadores-invisibles-palermo/" },
+        { "label": "Zona Norte", "url": "/alineadores-invisibles-zona-norte/" },
+        { "label": "Teleconsulta / Interior", "url": "/teleconsulta-ortodoncia/" }
       ]
-    }
+    },
+    { "label": "Precios", "url": "/ortodoncia-invisible-precios/" },
+    { "label": "Nosotros", "url": "/nosotros/" }
+  ],
+  "footer": [
+    { "label": "Ejercicios Fonoaudiología", "url": "/fonoaudiologia.html" },
+    { "label": "Instructivo Blanqueamiento", "url": "/blanqueamiento.html" },
+    { "label": "Uso de Contenciones", "url": "/contenciones.html" }
   ]
 }
