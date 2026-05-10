@@ -1,11 +1,33 @@
     <footer class="footer">
         <div class="container">
+            <div class="footer-grid">
+                <nav class="footer-col" aria-label="Treatments">
+                    <h3 class="footer-col-title">Treatments</h3>
+                    <ul>
+                        <li><a href="/en/services/">All services</a></li>
+                        <li><a href="/en/#evaluator">Bite check</a></li>
+                        <li><a href="/en/smilerunners/">SmileRunners (runners)</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer-col" aria-label="Visit Buenos Aires">
+                    <h3 class="footer-col-title">Visit</h3>
+                    <ul>
+                        <li><a href="{{ site.docturnoUrl }}" target="_blank" rel="noopener">Book a consultation</a></li>
+                        <li><a href="https://wa.me/{{ site.whatsappNumber }}" target="_blank" rel="noopener">WhatsApp Dr. Tkach</a></li>
+                        <li><a href="mailto:{{ site.email }}">Email us</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer-col" aria-label="Site language">
+                    <h3 class="footer-col-title">Language</h3>
+                    <ul>
+                        <li><a href="/" lang="es" hreflang="es-AR">🇦🇷 Español (Argentina)</a></li>
+                        <li><a href="/en/" lang="en" hreflang="en">🇺🇸 English</a></li>
+                    </ul>
+                </nav>
+            </div>
             <div class="footer-bottom">
                 <p>© <span id="year"></span> {{ site.name }} · {{ site.doctorName }} · {{ site.address.full }}</p>
-                <p class="social-links">
-                    <a href="/" lang="es">🇦🇷 Versión en español</a>
-                    {% for ig in site.instagram %} · <a href="{{ ig.url }}" target="_blank" rel="noopener">{{ ig.handle }}</a>{% endfor %}
-                </p>
+                <p class="social-links">{% for ig in site.instagram %}<a href="{{ ig.url }}" target="_blank" rel="noopener">{{ ig.handle }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
             </div>
         </div>
     </footer>
