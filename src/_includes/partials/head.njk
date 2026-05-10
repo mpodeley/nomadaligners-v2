@@ -18,6 +18,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    {% if page.url == "/" or page.url == "/en/" %}
+    <link rel="preload" as="image" href="{{ ogImage or site.ogImage }}" fetchpriority="high">
+    {% endif %}
 
     <meta property="og:locale" content="{{ ogLocale or site.ogLocale }}">
     <meta property="og:type" content="website">
