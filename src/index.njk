@@ -23,6 +23,8 @@ faqs:
     a: "Avisanos con anticipación. Te entregamos los juegos siguientes y damos las indicaciones de cambio durante el viaje, sin interrumpir el tratamiento."
   - q: "¿Los controles pueden ser remotos?"
     a: "Sí. Combinamos controles presenciales con teleconsulta cuando el caso lo permite. Mismo nivel de seguimiento."
+  - q: "¿Y si vivo lejos o estoy de paso por Buenos Aires?"
+    a: 'Tenemos <strong>NomadAligners Express</strong>: escaneo digital en tu primera visita y primeros alineadores en 5 días. Después seguimos por teleconsulta y te enviamos los siguientes juegos a donde estés. Ideal para pacientes del interior, viajeros y nómades digitales.'
 ---
 {% set waUrl = "https://wa.me/" + site.whatsappNumber + "?text=" + (site.whatsappDefaultText | urlencode) %}
 
@@ -97,7 +99,19 @@ faqs:
             <li><span class="process-step-num">3</span><strong>Tu plan, en 3D</strong><p>Te mostramos cómo se moverán tus dientes antes de empezar.</p></li>
             <li><span class="process-step-num">4</span><strong>Tus alineadores</strong><p>En la segunda visita ya te llevás los primeros. Controles mixtos (presencial + teleconsulta).</p></li>
         </ol>
-        <div class="cta-row-center">
+
+        {% set waExpressUrl = "https://wa.me/" + site.whatsappNumber + "?text=" + ("Hola, me interesa el plan NomadAligners Express (5 días)." | urlencode) %}
+        <div class="express-card" style="margin-top: 48px;">
+            <span class="eyebrow" style="color: var(--accent-warm);">🚀 NomadAligners Express</span>
+            <h3 style="margin-bottom: 10px; font-size: clamp(1.4rem, 2.5vw, 1.9rem); color: var(--dark-color); letter-spacing: -0.02em;">¿Vivís lejos o estás de paso? Escaneo hoy, alineadores en 5 días.</h3>
+            <p style="max-width: 720px; margin: 0;">Para pacientes del interior, viajeros y nómades digitales que pasan por Buenos Aires unos pocos días. Hacés el escaneo en tu primera visita y te llevás los primeros alineadores en <strong>5 días</strong>. Después seguimos por teleconsulta y te enviamos los siguientes juegos a donde estés.</p>
+            <div class="cta-row-center" style="justify-content: flex-start; margin-top: 18px;">
+                <a href="{{ waExpressUrl }}" target="_blank" rel="noopener" class="btn btn-primary" data-cta="whatsapp-express-home">Consultar plan Express</a>
+                <a href="/pacientes-del-interior/" class="running-link" data-cta="express-page-link">Ver más detalles →</a>
+            </div>
+        </div>
+
+        <div class="cta-row-center" style="margin-top: 32px;">
             <a href="{{ site.docturnoUrl }}" target="_blank" rel="noopener" class="btn btn-primary" data-cta="docturno-proceso">Agendar evaluación</a>
             <a href="{{ waUrl }}" target="_blank" rel="noopener" class="btn btn-secondary btn-whatsapp-contact" data-cta="whatsapp-proceso">
                 <img src="/img/WhatsApp.svg" alt="" class="whatsapp-icon" loading="lazy"> Consultar por WhatsApp
