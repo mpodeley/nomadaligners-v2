@@ -1,0 +1,111 @@
+---
+layout: layouts/base.njk
+permalink: /smilerunners/
+title: "SmileRunners — Ortodoncia para corredores"
+description: "Programa de alineadores invisibles pensado para runners en Buenos Aires. Turnos flexibles alrededor de tu entreno, teleconsulta cuando viajás, kit race-day. Por Dra. Daniela Tkach."
+ogTitle: "SmileRunners — Ortodoncia invisible para corredores"
+ogDescription: "Sonrisa alineada para mejor respiración y postura. Plan flexible para corredores en Buenos Aires."
+h1: SmileRunners
+faqs:
+  - q: "¿Puedo entrenar con alineadores puestos?"
+    a: "Sí. Los alineadores se llevan también durante el entreno. Mejoran la respiración nasal y reducen tensión mandibular al esfuerzo."
+  - q: "¿Qué pasa en una maratón o trail de varios días?"
+    a: "Te entregamos los juegos siguientes con anticipación y un cronograma de cambios para que viajes sin cortar el tratamiento. Sumamos un case de viaje resistente."
+  - q: "¿Necesito interrumpir si tengo una carrera importante?"
+    a: "No. Coordinamos refinamientos y entregas alrededor de tu calendario competitivo. Vos seguís entrenando, nosotros nos adaptamos."
+  - q: "¿Cómo afecta la respiración nasal?"
+    a: "Una mordida y arcada alineadas suelen mejorar el sellado labial y la respiración nasal. Si tenés que respirar por boca al correr, conviene evaluar también la postura lingual (fonoaudiología)."
+  - q: "¿Hay descuento para corredores afiliados a un club?"
+    a: "Tenemos beneficios especiales con clubes y entrenadores asociados. Contanos a qué grupo entrenás y te confirmamos."
+---
+{% set waUrl = "https://wa.me/" + site.whatsappNumber + "?text=" + ("Hola, soy runner y quiero saber más del plan SmileRunners." | urlencode) %}
+
+<section class="sr-hero">
+    <div class="container sr-hero-inner">
+        <span class="sr-bib">01</span>
+        <span class="eyebrow sr-eyebrow">SmileRunners · By NomadAligners</span>
+        <h1 class="sr-h1">Sonrisas alineadas para los que corren</h1>
+        <p class="sr-lead">Ortodoncia invisible con un plan pensado alrededor de tu calendario de entrenos y carreras. Turnos flexibles, teleconsulta cuando viajás, kit race-day.</p>
+        <div class="sr-cta-row">
+            <a href="{{ waUrl }}" target="_blank" rel="noopener" class="btn btn-runner btn-lg" data-cta="whatsapp-smilerunners-hero">Soy runner, contame</a>
+            <a href="https://www.instagram.com/smilerunners/" target="_blank" rel="noopener" class="btn btn-secondary-on-dark btn-lg" data-cta="ig-smilerunners-hero">📷 @smilerunners</a>
+        </div>
+    </div>
+</section>
+
+<section class="container" style="padding: 96px 0;">
+    <h2 style="text-align: center; max-width: 700px; margin: 0 auto 12px;">Por qué la mordida importa cuando corrés</h2>
+    <p class="section-lead">Tres conexiones reales entre la ortodoncia y el rendimiento.</p>
+    <div class="sr-why-grid">
+        <div class="sr-why-card">
+            <span class="sr-why-num">01</span>
+            <h3>Respiración</h3>
+            <p>Una mordida bien posicionada favorece el sellado labial y la respiración nasal sostenida — clave en aeróbico de fondo.</p>
+        </div>
+        <div class="sr-why-card">
+            <span class="sr-why-num">02</span>
+            <h3>Postura y mandíbula</h3>
+            <p>Apretar los dientes al esfuerzo genera tensión cervical. Una mordida balanceada reduce ese gasto energético invisible.</p>
+        </div>
+        <div class="sr-why-card">
+            <span class="sr-why-num">03</span>
+            <h3>Tiempos que cierran</h3>
+            <p>Te planificamos visitas y entregas en función de tus picos de entrenamiento. Sin pausas innecesarias en el tratamiento.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section-alt" style="padding: 96px 0;">
+    <div class="container">
+        <h2 style="text-align: center; max-width: 720px; margin: 0 auto 12px;">Plan SmileRunners</h2>
+        <p class="section-lead">Lo que sí o sí incluimos en el plan.</p>
+        <ul class="sr-plan-list">
+            <li><strong>Calendario flexible.</strong> Turnos pensados alrededor de tus entrenos largos y carreras objetivo.</li>
+            <li><strong>Teleconsulta para viajes.</strong> Cuando viajás a una carrera fuera, te seguimos por video. Mismo nivel de control.</li>
+            <li><strong>Race-day kit.</strong> Case rígido de viaje, set de chewies y limpieza compacta para que el alineador no sea un problema.</li>
+            <li><strong>Atención multidisciplinaria.</strong> Coordinamos con fonoaudiología si hace falta corregir la respiración bucal.</li>
+            <li><strong>Beneficios con clubes.</strong> Si entrenás en un club asociado, tenés condiciones especiales.</li>
+        </ul>
+        <div class="cta-row-center" style="margin-top: 32px;">
+            <a href="{{ waUrl }}" target="_blank" rel="noopener" class="btn btn-runner btn-lg" data-cta="whatsapp-smilerunners-plan">Pedir el plan SmileRunners</a>
+        </div>
+    </div>
+</section>
+
+<section class="container" style="padding: 96px 0;">
+    <h2 style="text-align: center; max-width: 720px; margin: 0 auto 12px;">Runners que ya están adentro</h2>
+    <p class="section-lead">Estamos sumando casos a la comunidad. Si querés ser parte, escribinos.</p>
+    <div class="testimonial-grid">
+        <div class="testimonial-card">
+            <blockquote>"Próximamente — abriendo las puertas a la primera tanda de runners SmileRunners en Buenos Aires."</blockquote>
+            <p class="testimonial-author">— Comunidad SmileRunners</p>
+        </div>
+    </div>
+    <div class="cta-row-center" style="margin-top: 28px;">
+        <a href="https://www.instagram.com/smilerunners/" target="_blank" rel="noopener" class="btn btn-secondary" data-cta="ig-smilerunners-community">Sumate a @smilerunners</a>
+    </div>
+</section>
+
+<section class="section-alt" style="padding: 80px 0;">
+    <div class="container">
+        <h2 style="text-align: center;">Preguntas frecuentes runners</h2>
+        {% for f in faqs %}
+        <details class="faq-item">
+            <summary class="faq-question">{{ f.q }}</summary>
+            <p class="faq-answer">{{ f.a | safe }}</p>
+        </details>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="sr-final-cta">
+    <div class="container">
+        <h2 class="sr-final-h2">Tu próxima carrera, con una sonrisa nueva</h2>
+        <p>Una consulta inicial define tu plan. Sin compromiso.</p>
+        <div class="cta-row-center cta-row-stack" style="margin-top: 28px;">
+            <a href="{{ site.smileViewUrl }}?utm_source=site&utm_medium=cta&utm_campaign=smileview&utm_content=smilerunners-final" target="_blank" rel="noopener" class="btn btn-smileview btn-lg" data-cta="smileview-smilerunners-final">✨ Probá tu nueva sonrisa</a>
+            <a href="{{ waUrl }}" target="_blank" rel="noopener" class="btn btn-runner btn-lg" data-cta="whatsapp-smilerunners-final">Soy runner, contame</a>
+            <a href="{{ site.docturnoUrl }}" target="_blank" rel="noopener" class="btn btn-secondary-on-dark btn-lg" data-cta="docturno-smilerunners-final">Agendar turno</a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,53 @@
+---
+layout: layouts/seo-page.njk
+permalink: /pacientes-del-interior/
+title: "Alineadores invisibles para pacientes del interior"
+description: "Ortodoncia invisible para pacientes de Neuquén, Córdoba, Mendoza, Salta y todo el interior. Workflow remoto con dentista local + visitas en Palermo + teleconsulta."
+h1: Tu tratamiento desde donde estés
+lead: "Si vivís fuera de Buenos Aires no tenés que mudarte para tener una sonrisa alineada. Coordinamos con dentistas de tu ciudad para escaneo y controles, y resolvemos el resto a distancia."
+subLead: 'Ideal para pacientes de <strong>Neuquén, Córdoba, Mendoza, Salta, Rosario, Bariloche</strong> y otras ciudades del interior.'
+faqs:
+  - q: "¿Cómo funciona el tratamiento si vivo en el interior?"
+    a: "Trabajamos con dentistas socios de tu ciudad. Una visita inicial a Buenos Aires (consulta + escaneo) o teleconsulta inicial, después tus controles los hacés con el dentista local y nosotros seguimos por video tu progreso. Las entregas de alineadores son por correo."
+  - q: "¿Y si rompo un attachment o necesito un ajuste?"
+    a: "El dentista socio puede resolver issues menores (recolocar un attachment, ajustar un alineador) siguiendo nuestras indicaciones. Para cosas mayores coordinamos un viaje a CABA con anticipación."
+  - q: "¿Cuántas veces tengo que viajar a Buenos Aires?"
+    a: "Idealmente 2-3 veces durante el tratamiento: una al inicio, una intermedia y una al final. El resto se maneja a distancia. Depende del caso."
+  - q: "¿En qué ciudades tienen partners?"
+    a: "Vamos sumando dentistas en plazas con alta demanda. Contanos en qué ciudad estás y te decimos si ya tenemos partner o te conseguimos uno."
+  - q: "¿Cuánto sale enviar los alineadores?"
+    a: "Lo incluimos en el plan. Calculamos las entregas anticipadas para minimizar costos de envío y evitar interrupciones."
+  - q: "¿Soy candidato si vivo lejos?"
+    a: "La mayoría de casos sí. La excepción son los muy complejos que requieren ajustes presenciales frecuentes. Lo definimos en la consulta inicial (presencial o teleconsulta)."
+---
+{% set waText = "Hola, vivo en el interior y quiero saber más sobre el plan SmileRunners para mi ciudad." | urlencode %}
+{% set waUrl = "https://wa.me/" + site.whatsappNumber + "?text=" + waText %}
+
+<section class="container" style="padding: 3.5rem 0;">
+    <h2 style="text-align:left">Cómo es el workflow</h2>
+    <ol class="process-steps">
+        <li><span class="process-step-num">1</span><strong>Consulta inicial</strong><p>Presencial en Palermo Chico o teleconsulta. Vemos tu caso, expectativas y armamos plan.</p></li>
+        <li><span class="process-step-num">2</span><strong>Escaneo digital</strong><p>Si venís a BA: lo hacemos acá. Si no: en el partner local con un protocolo claro.</p></li>
+        <li><span class="process-step-num">3</span><strong>Tratamiento + controles mixtos</strong><p>Alineadores por correo. Controles locales con el partner + teleconsulta con nosotros.</p></li>
+        <li><span class="process-step-num">4</span><strong>Cierre y retención</strong><p>Visita final a BA o videocierre, plan de retención y seguimiento post-tratamiento.</p></li>
+    </ol>
+</section>
+
+<section class="container" style="padding: 3.5rem 0;">
+    <h2 style="text-align:left">Qué necesitás antes de empezar</h2>
+    <ul>
+        <li><img src="/img/icon-check.svg" alt="check"> Fotos claras de tu sonrisa (te pasamos las indicaciones)</li>
+        <li><img src="/img/icon-check.svg" alt="check"> Tener un dentista de cabecera en tu ciudad (si no, te lo coordinamos)</li>
+        <li><img src="/img/icon-check.svg" alt="check"> Disponibilidad para 2-3 viajes a CABA durante el tratamiento</li>
+        <li><img src="/img/icon-check.svg" alt="check"> Compromiso con las teleconsultas mensuales</li>
+    </ul>
+</section>
+
+<section class="container" style="padding: 3.5rem 0;">
+    <h2 style="text-align:left">Contanos dónde vivís</h2>
+    <p>El primer paso es saber tu ciudad y motivo. Te respondemos en el día con los próximos pasos.</p>
+    <div class="cta-row-center cta-row-stack" style="margin-top: 24px;">
+        <a href="{{ waUrl }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg" data-cta="whatsapp-interior-form">📱 Escribime por WhatsApp</a>
+        <a href="mailto:{{ site.email }}?subject=Interesado%20desde%20el%20interior&body=Hola%2C%0A%0AVivo%20en%20%5Btu%20ciudad%5D.%0AMotivo%20de%20consulta%3A%20%5Btu%20caso%5D.%0A%C2%BFTen%C3%A9s%20dentista%20de%20cabecera%3F%20%5Bs%C3%AD%2Fno%5D%0A%0AGracias!" class="btn btn-secondary btn-lg" data-cta="email-interior-form">✉️ Mandame un mail</a>
+    </div>
+</section>

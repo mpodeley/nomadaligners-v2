@@ -727,8 +727,20 @@ p {
 .hero-lead { font-size: 1.15rem; line-height: 1.6; margin: 16px 0 28px; max-width: 560px; }
 .hero-cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 12px; }
 .hero-microcopy { margin-top: 6px; font-size: 0.85rem; }
-.hero-image-wrap { display: flex; justify-content: center; }
-.hero-image { width: 100%; max-width: 520px; height: auto; border-radius: 16px; box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+.hero-image-wrap { display: flex; justify-content: center; position: relative; }
+.hero-image-wrap::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: -16px;
+    bottom: -16px;
+    left: 24px;
+    background: var(--primary-color-soft);
+    border-radius: 32px 80px 32px 80px;
+    z-index: 0;
+}
+.hero-image { width: 100%; max-width: 520px; height: auto; border-radius: 80px 32px 80px 32px; box-shadow: 0 12px 32px rgba(15, 27, 45, 0.10); position: relative; z-index: 1; }
+@media (max-width: 768px) { .hero-image { border-radius: 40px 20px 40px 20px; } .hero-image-wrap::before { border-radius: 20px 40px 20px 40px; top: 16px; left: 16px; right: -8px; bottom: -8px; } }
 
 @media (max-width: 768px) {
     .hero-flex-container { grid-template-columns: 1fr; gap: 24px; }
@@ -1117,4 +1129,49 @@ h3 { font-family: var(--font-family); font-weight: 600; letter-spacing: -0.01em;
     transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
 }
 .btn-runner:hover { background: #ff7034; color: white; transform: translateY(-2px); box-shadow: 0 10px 26px rgba(255, 91, 20, 0.5); }
+
+/* === SmileRunners dedicated page (/smilerunners/) === */
+.sr-hero {
+    background: var(--dark-color);
+    color: white;
+    padding: 120px 0 96px;
+    position: relative;
+    overflow: hidden;
+}
+.sr-hero::after {
+    content: '';
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 480px;
+    height: 480px;
+    background: radial-gradient(circle, rgba(255,91,20,0.18) 0%, transparent 70%);
+    pointer-events: none;
+}
+.sr-hero-inner { max-width: 760px; position: relative; z-index: 1; }
+.sr-bib { display: inline-block; font-size: 5.5rem; font-weight: 800; line-height: 0.9; color: var(--accent-runner); letter-spacing: -0.05em; margin-bottom: 8px; }
+.sr-eyebrow { display: block; color: var(--accent-runner); font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; margin: 6px 0 18px; }
+.sr-h1 { color: white; font-size: clamp(2.4rem, 5vw, 3.6rem); margin-bottom: 18px; }
+.sr-lead { font-size: 1.15rem; color: rgba(255,255,255,0.85); margin-bottom: 28px; max-width: 580px; }
+.sr-cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn-secondary-on-dark { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.35); }
+.btn-secondary-on-dark:hover { background: rgba(255,255,255,0.08); border-color: white; color: white; }
+
+.sr-why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; max-width: 1100px; margin: 32px auto 0; }
+.sr-why-card { background: var(--card-color); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 32px 28px; box-shadow: var(--shadow-sm); transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s; }
+.sr-why-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--accent-runner); }
+.sr-why-num { display: inline-block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; color: var(--accent-runner); margin-bottom: 8px; }
+.sr-why-card h3 { color: var(--dark-color); margin-bottom: 8px; font-size: 1.15rem; }
+.sr-why-card p { color: var(--text-color); margin: 0; }
+
+.sr-plan-list { list-style: none; padding: 0; max-width: 720px; margin: 0 auto; }
+.sr-plan-list li { padding: 18px 0 18px 36px; border-bottom: 1px solid var(--border-color); position: relative; color: var(--text-color); }
+.sr-plan-list li::before { content: '→'; position: absolute; left: 0; top: 18px; color: var(--accent-runner); font-weight: 700; font-size: 1.1rem; }
+.sr-plan-list li:last-child { border-bottom: none; }
+.sr-plan-list li strong { color: var(--dark-color); display: inline-block; margin-right: 4px; }
+
+.sr-final-cta { background: var(--dark-color); color: white; padding: 96px 0; text-align: center; }
+.sr-final-h2 { color: white; max-width: 720px; margin: 0 auto 12px; }
+.sr-final-cta p { color: rgba(255,255,255,0.78); }
 

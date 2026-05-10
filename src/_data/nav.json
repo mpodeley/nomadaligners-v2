@@ -17,11 +17,18 @@
       ]
     },
     {
-      "title": "Zonas",
+      "title": "Zonas y formatos",
       "links": [
         { "label": "Palermo (CABA)", "url": "/alineadores-invisibles-palermo/" },
         { "label": "Zona Norte", "url": "/alineadores-invisibles-zona-norte/" },
-        { "label": "Teleconsulta / Interior", "url": "/teleconsulta-ortodoncia/" }
+        { "label": "Teleconsulta", "url": "/teleconsulta-ortodoncia/" },
+        { "label": "Pacientes del interior", "url": "/pacientes-del-interior/" }
+      ]
+    },
+    {
+      "title": "Programas",
+      "links": [
+        { "label": "SmileRunners — para corredores", "url": "/smilerunners/" }
       ]
     },
     {
