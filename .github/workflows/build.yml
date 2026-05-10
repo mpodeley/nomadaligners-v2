@@ -28,8 +28,6 @@ jobs:
       - run: npm ci
 
       - run: npm run build
-        env:
-          PATH_PREFIX: /nomadaligners-v2/
 
       - uses: actions/configure-pages@v5
 
