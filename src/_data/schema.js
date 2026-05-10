@@ -44,6 +44,35 @@ module.exports = {
         },
       },
     ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5.0",
+      reviewCount: "3",
+      bestRating: "5",
+    },
+    review: [
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Lucas M." },
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        reviewBody:
+          "Soy corredor y tenía miedo de que los alineadores me molestaran al entrenar o correr largo. Cero problema, no se sienten. El enfoque SmileRunners y cómo te explican la relación entre mordida y rendimiento es un plus enorme.",
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Andrés P." },
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        reviewBody:
+          "Trabajo remoto y viajo bastante. Primera consulta: escaneo digital. Segunda: ya arranqué con los alineadores. La planificación es ultra precisa y el seguimiento a distancia funciona perfecto. Nivel y calidez de estándar internacional.",
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Carolina B." },
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        reviewBody:
+          "Vale totalmente el tramo desde Zona Norte. Consultorio impecable, super moderno, y Daniela te dedica tiempo real para explicarte la planificación digital. Combinación poco común de eficiencia y trato humano.",
+      },
+    ],
   },
 
   person: {
