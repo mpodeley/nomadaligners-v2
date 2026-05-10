@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+permalink: /404.html
+title: "Página no encontrada"
+description: "La página que buscás no existe o se movió. Volvé al inicio o evaluá tu sonrisa."
+robots: noindex,follow
+eleventyExcludeFromCollections: true
+---
+<section style="min-height: 70vh; display: flex; align-items: center; padding: 80px 0;">
+    <div class="container" style="text-align: center; max-width: 640px;">
+        <span class="eyebrow" style="color: var(--accent-warm);">Error 404</span>
+        <h1 style="margin: 12px 0 18px;">Esta página no existe</h1>
+        <p style="font-size: 1.1rem; color: var(--text-color); margin-bottom: 32px;">Quizás se movió o quizás escribiste mal el link. Pero estás a un click de volver al evaluador o de probar tu nueva sonrisa.</p>
+        <div class="cta-row-center cta-row-stack">
+            <a href="/" class="btn btn-primary btn-lg" data-cta="404-home">← Volver al inicio</a>
+            <a href="/#evalua" class="btn btn-secondary btn-lg" data-cta="404-evaluador">Evaluá tu mordida</a>
+            <a href="{{ site.smileViewUrl }}?utm_source=site&utm_medium=404&utm_campaign=smileview&utm_content=404" target="_blank" rel="noopener" class="btn btn-smileview btn-lg" data-cta="smileview-404">✨ Probá tu nueva sonrisa</a>
+        </div>
+    </div>
+</section>
