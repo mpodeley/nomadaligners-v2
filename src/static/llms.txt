@@ -15,7 +15,7 @@
 
 ## Programas especiales
 
-- **NomadAligners Express**: para pacientes en tránsito por Buenos Aires (turismo dental, nómades digitales, viajeros). Escaneo digital en la primera visita, primeros alineadores listos en **5 días**. Después se continúa por teleconsulta + envío internacional de los siguientes juegos.
+- **NomadAligners Express**: para pacientes en tránsito por Buenos Aires (turismo dental, nómades digitales, viajeros). Escaneo digital en la primera visita y, en la entrega del día 5, el paciente se lleva **todos los alineadores del tratamiento** en una sola entrega presencial. Después seguimiento por teleconsulta desde donde esté. **No se hacen envíos por correo** — el paciente retira todo en el consultorio.
 - **SmileRunners**: programa para corredores y atletas. Turnos flexibles alrededor de entrenamientos y carreras, teleconsulta para viajes, race-day kit.
 
 ## Servicios principales
