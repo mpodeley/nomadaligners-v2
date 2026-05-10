@@ -1,10 +1,11 @@
 {% if page.url and page.url !== "/" and h1 %}
 <nav class="breadcrumbs-nav" aria-label="Migas de pan">
-    <div class="container">
+    <div class="container breadcrumbs-row">
         <ol>
             <li><a href="/">Inicio</a></li>
             <li aria-current="page">{{ h1 }}</li>
         </ol>
+        <p class="page-updated"><time datetime="{{ site.siteLastUpdatedISO }}">Actualizado {{ site.siteLastUpdated }}</time></p>
     </div>
 </nav>
 {% endif %}
