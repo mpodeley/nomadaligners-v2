@@ -8,7 +8,6 @@ module.exports = {
     url: site.baseUrl,
     telephone: site.phone,
     image: [site.baseUrl + site.ogImage],
-    priceRange: site.priceRange,
     address: {
       "@type": "PostalAddress",
       streetAddress: site.address.street,

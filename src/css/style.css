@@ -602,3 +602,103 @@ p {
 .hero .contact-buttons { justify-content: center; }
 .hero .contact-buttons .btn { min-width: 180px; }
 
+/* === v2 ADDITIONS === */
+
+/* SmileView CTA — gradient distinto del primario para destacar */
+.btn-smileview {
+    background: linear-gradient(135deg, #ff7a59 0%, #c33aa9 100%);
+    color: var(--white-color);
+    box-shadow: 0 4px 12px rgba(195, 58, 169, 0.35);
+    font-weight: 600;
+}
+.btn-smileview:hover {
+    color: var(--white-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(195, 58, 169, 0.45);
+    filter: brightness(1.05);
+}
+
+/* Tap-target mínimo (Apple HIG / Material 44px) */
+.btn { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+.faq-question { min-height: 44px; }
+
+/* Mobile form inputs — anti-zoom iOS (font-size >= 16px) */
+.quote-form label { display: block; margin-bottom: 14px; font-size: 0.95rem; color: var(--dark-color); font-weight: 500; }
+.quote-form input,
+.quote-form select,
+.quote-form textarea,
+.lead-form input,
+.lead-form select,
+.lead-form textarea {
+    font: inherit;
+    font-size: 16px;
+    min-height: 44px;
+    padding: 10px 12px;
+    width: 100%;
+    margin-top: 6px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--white-color);
+    color: var(--dark-color);
+    appearance: none;
+    -webkit-appearance: none;
+}
+.quote-form input:focus,
+.quote-form select:focus,
+.quote-form textarea:focus,
+.lead-form input:focus,
+.lead-form select:focus,
+.lead-form textarea:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 1px;
+    border-color: var(--primary-color);
+}
+.quote-form button[type="submit"] { margin-top: 12px; width: 100%; max-width: 380px; }
+
+/* Dropdown touch-friendly: cuando .open está aplicado, mostrar */
+.dropdown.open .dropdown-content { display: flex; }
+@media (min-width: 992px) {
+    .dropdown:hover .dropdown-content { display: flex; }
+}
+
+/* Sticky CTA bar mobile — WhatsApp + SmileView lado a lado */
+.sticky-cta-mobile {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 1000;
+    padding: 8px;
+    gap: 8px;
+    background: var(--white-color);
+    border-top: 1px solid var(--border-color);
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+}
+.sticky-cta-mobile a {
+    flex: 1;
+    text-align: center;
+    padding: 12px 8px;
+    border-radius: 10px;
+    color: var(--white-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+.sticky-cta-mobile .cta-wa { background: var(--success-color); }
+.sticky-cta-mobile .cta-sv { background: linear-gradient(135deg, #ff7a59 0%, #c33aa9 100%); }
+.sticky-cta-mobile .whatsapp-icon { width: 18px; height: 18px; }
+
+@media (max-width: 768px) {
+    .sticky-cta-mobile { display: flex; }
+    body { padding-bottom: 72px; } /* deja espacio al final para no tapar contenido */
+    .footer { padding-bottom: 12px; }
+}
+
+/* Mobile header height ajustado */
+@media (max-width: 768px) {
+    :root { --header-height: 60px; }
+}
+

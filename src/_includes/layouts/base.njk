@@ -12,6 +12,16 @@
 
 {% include "partials/footer.njk" %}
 
+{% set waUrlSticky = "https://wa.me/" + site.whatsappNumber + "?text=" + (site.whatsappDefaultText | urlencode) %}
+<div class="sticky-cta-mobile" aria-label="Acciones rápidas">
+    <a href="{{ waUrlSticky }}" target="_blank" rel="noopener" class="cta-wa" data-cta="whatsapp-sticky-mobile" aria-label="WhatsApp">
+        <img src="/img/WhatsApp.svg" alt="" class="whatsapp-icon" loading="lazy"> WhatsApp
+    </a>
+    <a href="{{ site.smileViewUrl }}?utm_source=site&utm_medium=sticky&utm_campaign=smileview&utm_content=sticky-mobile" target="_blank" rel="noopener" class="cta-sv" data-cta="smileview-sticky-mobile" aria-label="SmileView">
+        ✨ Tu nueva sonrisa
+    </a>
+</div>
+
 <script src="/js/script.js"></script>
 </body>
 </html>
