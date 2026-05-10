@@ -1,6 +1,7 @@
 {
   "main": [
     { "label": "Evaluá tu mordida", "url": "/#evalua" },
+    { "label": "Servicios", "url": "/servicios/" },
     { "label": "Precios", "url": "/ortodoncia-invisible-precios/" },
     { "label": "Nosotros", "url": "/nosotros/" },
     { "label": "Contacto", "url": "/#contacto" }

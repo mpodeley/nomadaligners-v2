@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "key": "alineadores",
+      "title": "Alineadores invisibles",
+      "tagline": "Nuestra especialidad",
+      "description": "Ortodoncia transparente con planificación digital. Escaneo en la primera visita, alineadores en la segunda. Certificada Invisalign.",
+      "icon": "✨",
+      "flagship": true,
+      "link": "/#evalua",
+      "linkText": "Evaluá tu mordida"
+    },
+    {
+      "key": "carillas",
+      "title": "Carillas dentales",
+      "tagline": "Estética dental",
+      "description": "Carillas de porcelana o composite para transformar la forma, el color o el tamaño de tus dientes con mínima preparación.",
+      "icon": "💎",
+      "link": null
+    },
+    {
+      "key": "blanqueamiento",
+      "title": "Blanqueamiento",
+      "tagline": "Tu sonrisa, más luminosa",
+      "description": "Blanqueamiento ambulatorio o en consultorio según tu caso. Resultados visibles y duraderos con cuidado del esmalte.",
+      "icon": "🌟",
+      "link": null
+    },
+    {
+      "key": "coronas",
+      "title": "Coronas de porcelana",
+      "tagline": "Instalación en 7 días",
+      "description": "Coronas de porcelana pura con escáner digital. Diseño, fabricación y colocación en una sola semana.",
+      "icon": "👑",
+      "link": null
+    },
+    {
+      "key": "implantes",
+      "title": "Implantología",
+      "tagline": "Reemplazar dientes perdidos",
+      "description": "Implantes dentales con planificación digital, en colaboración con cirujanos del equipo. Estética y función completa.",
+      "icon": "🔩",
+      "link": null
+    },
+    {
+      "key": "rehabilitacion",
+      "title": "Rehabilitación protésica",
+      "tagline": "Casos complejos",
+      "description": "Coronas, puentes y prótesis fijas o removibles para devolver función estética cuando hay múltiples piezas comprometidas.",
+      "icon": "🦷",
+      "link": null
+    },
+    {
+      "key": "periodoncia",
+      "title": "Periodoncia",
+      "tagline": "Salud de la encía",
+      "description": "Limpieza profunda y tratamiento de enfermedades periodontales con periodoncista del equipo. Base para cualquier tratamiento estético.",
+      "icon": "🌱",
+      "link": null
+    },
+    {
+      "key": "contenciones",
+      "title": "Contenciones",
+      "tagline": "Mantener el resultado",
+      "description": "Retenedores fijos o removibles tras el tratamiento de ortodoncia. Renovación cada 4-6 meses según uso.",
+      "icon": "🛡️",
+      "link": "/contenciones.html",
+      "linkText": "Cómo se usan"
+    },
+    {
+      "key": "fonoaudiologia",
+      "title": "Fonoaudiología",
+      "tagline": "Hábitos linguales",
+      "description": "Reeducación de la deglución atípica y empuje lingual con fonoaudióloga del equipo. Clave en casos de mordida abierta.",
+      "icon": "👅",
+      "link": "/fonoaudiologia.html",
+      "linkText": "Ejercicios guiados"
+    },
+    {
+      "key": "teleconsulta",
+      "title": "Teleconsulta",
+      "tagline": "Seguimiento remoto",
+      "description": "Controles por video para pacientes que viajan o viven lejos. Funciona en combinación con visitas presenciales.",
+      "icon": "📹",
+      "link": "/teleconsulta-ortodoncia/",
+      "linkText": "Cómo funciona"
+    }
+  ]
+}

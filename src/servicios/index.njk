@@ -1,0 +1,46 @@
+---
+layout: layouts/base.njk
+permalink: /servicios/
+title: "Servicios de odontología estética y ortodoncia"
+description: "Alineadores invisibles, carillas, blanqueamiento, coronas, implantes y más. Equipo interdisciplinario en Palermo Chico, Buenos Aires. Por Dra. Daniela Tkach."
+h1: Servicios
+---
+{% set waUrl = "https://wa.me/" + site.whatsappNumber + "?text=" + (site.whatsappDefaultText | urlencode) %}
+
+<section class="services-hero">
+    <div class="container">
+        <span class="eyebrow">Portfolio completo</span>
+        <h1>No solo alineadores</h1>
+        <p class="section-lead" style="text-align: left; margin: 12px 0 0;">Dra. Daniela Tkach y un equipo interdisciplinario que cubre estética, prevención y rehabilitación. Una sola consulta, todas las soluciones.</p>
+    </div>
+</section>
+
+<section class="container" style="padding: 64px 0;">
+    <div class="services-grid">
+        {% for s in services.items %}
+        <article class="service-card{% if s.flagship %} service-flagship{% endif %}">
+            <div class="service-icon">{{ s.icon }}</div>
+            {% if s.flagship %}<span class="service-badge">Flagship</span>{% endif %}
+            <span class="service-tagline">{{ s.tagline }}</span>
+            <h2 class="service-title">{{ s.title }}</h2>
+            <p class="service-desc">{{ s.description }}</p>
+            {% if s.link %}
+            <a href="{{ s.link }}" class="service-link" data-cta="service-{{ s.key }}">{{ s.linkText or "Ver más" }} →</a>
+            {% endif %}
+        </article>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="section-alt" style="padding: 80px 0;">
+    <div class="container" style="text-align: center;">
+        <h2>¿No estás seguro de qué necesitás?</h2>
+        <p class="section-lead">En la consulta inicial revisamos todo: ortodoncia, estética, salud general de la boca. Salís con un plan claro.</p>
+        <div class="cta-row-center cta-row-stack" style="margin-top: 24px;">
+            <a href="{{ site.docturnoUrl }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg" data-cta="docturno-servicios">Agendar evaluación</a>
+            <a href="{{ waUrl }}" target="_blank" rel="noopener" class="btn btn-secondary btn-lg btn-whatsapp-contact" data-cta="whatsapp-servicios">
+                <img src="/img/WhatsApp.svg" alt="" class="whatsapp-icon" loading="lazy"> Consultar por WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
