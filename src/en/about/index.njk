@@ -1,0 +1,61 @@
+---
+layout: layouts/base.en.njk
+permalink: /en/about/
+lang: en
+ogLocale: en_US
+title: "About Dr. Daniela Tkach — Invisalign in Buenos Aires"
+title_suffix: false
+description: "Dr. Daniela Tkach — Invisalign-certified orthodontist with 17+ years of clinical experience in Buenos Aires. Premium care, English-speaking, interdisciplinary team."
+ogTitle: "Dr. Daniela Tkach — Invisalign provider in Palermo Chico"
+ogDescription: "17+ years of orthodontic experience. Invisalign-certified. English-speaking practice in Buenos Aires."
+hreflang:
+  - { lang: "es-AR", url: "/nosotros/" }
+  - { lang: "en", url: "/en/about/" }
+  - { lang: "x-default", url: "/nosotros/" }
+---
+{% set waUrl = "https://wa.me/" + site.whatsappNumber + "?text=" + ("Hi, I would like to schedule a consultation with Dr. Tkach." | urlencode) %}
+
+<section class="services-hero">
+    <div class="container">
+        <span class="eyebrow">English-speaking · Palermo Chico</span>
+        <h1>Meet Dr. Daniela Tkach</h1>
+        <p class="section-lead" style="text-align: left; margin: 12px 0 0;">17+ years of clinical experience. Invisalign-certified. Working out of a fully digital clinic in Palermo Chico, with an interdisciplinary team for every case.</p>
+    </div>
+</section>
+
+<section class="container about-flex" style="padding: 64px 0;">
+    <img src="/img/dani_tkach.jpg" alt="Dr. Daniela Tkach" class="about-photo" loading="lazy">
+    <div>
+        <h2>A clinical approach with depth</h2>
+        <p>Dr. Tkach specializes in <strong>orthodontics with clear aligners (Invisalign)</strong> and leads a multi-specialty team in Palermo Chico — one of Buenos Aires' most prestigious clinical districts.</p>
+        <p>Her practice combines <strong>digital planning, in-house technology, and a human approach</strong>. Every plan starts with a real conversation about what you want from your smile — never a fixed protocol.</p>
+        <p>International patients are common: many come from neighboring countries or fly in for treatment, taking advantage of premium care at a fraction of US/EU prices.</p>
+    </div>
+</section>
+
+<section class="section-alt" style="padding: 80px 0;">
+    <div class="container">
+        <h2 style="text-align:center;">Specialties &amp; team</h2>
+        <p class="section-lead">All of these are coordinated under one roof.</p>
+        <ul style="max-width: 720px; margin: 32px auto 0; list-style: none; padding: 0;">
+            <li style="padding: 12px 0; border-bottom: 1px solid var(--border-color);"><img src="/img/icon-check.svg" alt=""> <strong>Orthodontics with clear aligners</strong> — Invisalign provider, digital planning, in-house refinements.</li>
+            <li style="padding: 12px 0; border-bottom: 1px solid var(--border-color);"><img src="/img/icon-check.svg" alt=""> <strong>Aesthetic dentistry</strong> — porcelain veneers, in-office and take-home whitening.</li>
+            <li style="padding: 12px 0; border-bottom: 1px solid var(--border-color);"><img src="/img/icon-check.svg" alt=""> <strong>Restorative</strong> — porcelain crowns (7-day delivery), bridges, full-mouth rehabilitation.</li>
+            <li style="padding: 12px 0; border-bottom: 1px solid var(--border-color);"><img src="/img/icon-check.svg" alt=""> <strong>Implants</strong> — digitally planned, surgeon-placed, prosthetic finish on site.</li>
+            <li style="padding: 12px 0; border-bottom: 1px solid var(--border-color);"><img src="/img/icon-check.svg" alt=""> <strong>Periodontics</strong> — gum health treatment with the team's periodontist.</li>
+            <li style="padding: 12px 0;"><img src="/img/icon-check.svg" alt=""> <strong>Myofunctional therapy</strong> — for cases where tongue posture or breathing affects the bite.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="container" style="padding: 80px 0; text-align: center;">
+    <h2>Talk to Dr. Tkach</h2>
+    <p class="section-lead">First consultation is a real conversation — not a sales pitch. We're happy to start with WhatsApp or video before you book a flight.</p>
+    <div class="cta-row-center cta-row-stack" style="margin-top: 24px;">
+        <a href="{{ site.docturnoUrl }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg" data-cta="docturno-about-en">Book a consultation</a>
+        <a href="{{ waUrl }}" target="_blank" rel="noopener" class="btn btn-secondary btn-lg btn-whatsapp-contact" data-cta="whatsapp-about-en">
+            <img src="/img/WhatsApp.svg" alt="" class="whatsapp-icon" loading="lazy"> WhatsApp Dr. Tkach
+        </a>
+        <a href="{{ site.smileViewUrl }}?utm_source=site&utm_medium=about&utm_campaign=smileview&utm_content=about-en" target="_blank" rel="noopener" class="btn btn-smileview btn-lg" data-cta="smileview-about-en">✨ Preview your new smile</a>
+    </div>
+</section>
