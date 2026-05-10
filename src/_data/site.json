@@ -58,5 +58,8 @@
   "googleRating": "4.9",
   "googleReviewCount": "123",
 
-  "gaMeasurementId": null
+  "gaMeasurementId": null,
+
+  "googleSiteVerification": null,
+  "bingSiteVerification": null
 }

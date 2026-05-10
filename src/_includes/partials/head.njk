@@ -5,6 +5,8 @@
     <link rel="canonical" href="{{ site.baseUrl }}{{ page.url }}">
     <meta name="robots" content="{{ robots or 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1' }}">
     <meta name="theme-color" content="{{ site.themeColor }}">
+    {% if site.googleSiteVerification %}<meta name="google-site-verification" content="{{ site.googleSiteVerification }}">{% endif %}
+    {% if site.bingSiteVerification %}<meta name="msvalidate.01" content="{{ site.bingSiteVerification }}">{% endif %}
 
     {% if hreflang %}
       {% for alt in hreflang %}
