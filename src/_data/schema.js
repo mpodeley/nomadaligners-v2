@@ -46,8 +46,8 @@ module.exports = {
     ],
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: "3",
+      ratingValue: "4.9",
+      reviewCount: "123",
       bestRating: "5",
     },
     review: [
