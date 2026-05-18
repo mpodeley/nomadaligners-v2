@@ -1364,3 +1364,141 @@ img[src*="icon-check"] {
 }
 li img[src*="icon-check"] { margin-top: 2px; }
 
+/* --- CV (Curriculum) --- */
+.cv-actions-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+}
+.cv-actions-row .btn { margin: 0; }
+.btn-text-link {
+    color: var(--secondary-color);
+    text-decoration: underline;
+    font-size: 0.95rem;
+}
+.btn-text-link:hover { color: var(--primary-color); }
+
+.cv { max-width: 920px; margin: 0 auto; }
+.cv-section { margin: 2.5rem 0; }
+.cv-section h2 {
+    text-align: left;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 6px;
+    margin-bottom: 1rem;
+    font-size: 1.45rem;
+}
+.cv-section h3 {
+    margin-top: 1.6rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.05rem;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.cv-list { list-style: none; padding: 0; margin: 0; }
+.cv-list li {
+    padding: 8px 0 8px 20px;
+    border-bottom: 1px dashed rgba(0,0,0,0.08);
+    position: relative;
+    line-height: 1.55;
+}
+.cv-list li:before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+.cv-list li:last-child { border-bottom: none; }
+
+.cv-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 8px 18px;
+}
+.cv-grid li {
+    padding: 6px 0 6px 20px;
+    position: relative;
+}
+.cv-grid li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--success-color, #28a745);
+    font-weight: bold;
+}
+
+.cv-details {
+    background: rgba(0, 123, 255, 0.04);
+    border-left: 3px solid var(--primary-color);
+    padding: 1.2rem 1.4rem;
+    border-radius: 6px;
+}
+.cv-details > summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+.cv-details > summary::-webkit-details-marker { display: none; }
+.cv-details > summary h2 {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+    margin: 0 !important;
+}
+.cv-details-hint {
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+    font-weight: 400;
+    white-space: nowrap;
+}
+.cv-details[open] .cv-details-hint::after { content: " (cerrar)"; }
+
+/* --- Print: solo el CV --- */
+@media print {
+    /* Hide everything that's not the CV */
+    header, footer, .breadcrumbs, .faq, .contact, .contact-info,
+    .cta-row, .cta-row-center, .cta-buttons, .hero-content > p:has(.btn),
+    .trust-row, .cv-actions-row, .section-alt,
+    [class*="btn-whatsapp"], [data-cta], #sticky-bottom-bar, .smileview-button,
+    .hero img, script + section { display: none !important; }
+
+    body { background: white; color: #000; font-size: 11pt; }
+    .container { max-width: 100% !important; padding: 0 !important; }
+    .hero { min-height: 0 !important; padding: 0 0 12pt !important; border-bottom: 1px solid #999; margin-bottom: 16pt; }
+    .hero h1 { font-size: 22pt; margin: 0 0 4pt; }
+    .hero p { font-size: 11pt; margin: 0 0 4pt; }
+    .hero .small.muted { font-size: 9pt; color: #444; }
+
+    .cv { max-width: 100%; padding: 0 !important; }
+    .cv-section { margin: 14pt 0; page-break-inside: avoid; }
+    .cv-section h2 { font-size: 13pt; border-bottom: 1pt solid #000; color: #000; }
+    .cv-section h3 { font-size: 10pt; color: #444; }
+    .cv-list li { border-bottom: none; padding: 3pt 0 3pt 14pt; }
+    .cv-list li:before { color: #000; }
+    .cv-grid { gap: 2pt 12pt; }
+    .cv-grid li { padding: 2pt 0 2pt 14pt; }
+    .cv-grid li:before { color: #000; }
+
+    /* Force collapsible to expand on print */
+    .cv-details { background: none; border-left: none; padding: 0; page-break-before: auto; }
+    .cv-details > summary { display: none; }
+    .cv-details[open] > * { display: block !important; }
+    details:not([open]) { display: block !important; }
+    details:not([open]) > *:not(summary) { display: block !important; }
+
+    a { color: #000; text-decoration: none; }
+    a[href^="http"]:after { content: " (" attr(href) ")"; font-size: 9pt; color: #555; }
+}
+
+@media (max-width: 600px) {
+    .cv-section h2 { font-size: 1.25rem; }
+    .cv-details { padding: 1rem; }
+}
+
